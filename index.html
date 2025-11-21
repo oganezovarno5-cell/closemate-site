@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CloseMate AI – 24/7 AI Sales Closer for Small Businesses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="CloseMate AI is a 24/7 AI sales closer that responds to leads instantly, qualifies them and books calls for you. Built for small businesses."
+  />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, Arial; background:#f8fafc; color:#0f172a; }
+    a { text-decoration:none; color:inherit; }
+    .container{max-width:1100px;margin:0 auto;padding:16px;}
+    header{border-bottom:1px solid #e2e8f0;background:#fff;}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;}
+    .logo{display:flex;align-items:center;gap:8px;}
+    .logo-mark{width:32px;height:32px;border-radius:50%;border:2px solid #0f172a;display:flex;justify-content:center;align-items:center;font-weight:700;}
+    .logo-text{font-size:18px;font-weight:600;}
+
+    .nav-links{display:flex;gap:20px;font-size:14px;}
+    .nav-links a{opacity:.8;} .nav-links a:hover{opacity:1;}
+
+    .nav-cta{padding:8px 16px;border-radius:999px;border:1px solid #0f172a;font-size:14px;}
+    .nav-cta.secondary{background:#fff;color:#0f172a;}
+    .nav-cta{background:#0f172a;color:#fff;}
+
+    .hero{padding:60px 0;display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+    .hero-title{font-size:36px;font-weight:700;margin:20px 0;}
+    .hero-highlight{background:#e0f2fe;padding:4px;border-radius:6px;}
+    .hero-subtitle{opacity:.8;font-size:16px;margin-bottom:20px;max-width:450px;}
+    .btn-primary{background:#0f172a;color:#fff;border:none;padding:12px 24px;border-radius:999px;cursor:pointer;font-size:14px;}
+    .btn-secondary{background:#e2e8f0;padding:12px 24px;border-radius:999px;font-size:14px;border:none;cursor:pointer;}
+
+    .hero-card{background:#0f172a;color:#fff;border-radius:20px;padding:20px;margin-top:20px;}
+    .lead-bubble,.ai-bubble{padding:10px;border-radius:12px;margin-bottom:8px;font-size:14px;max-width:250px;}
+    .lead-bubble{background:#1e293b;} .ai-bubble{background:#f97316;color:#000;margin-left:auto;}
+
+    section{padding:50px 0;border-top:1px solid #e2e8f0;}
+    .section-title{font-size:26px;font-weight:600;margin-bottom:10px;}
+    .section-subtitle{font-size:15px;opacity:.8;max-width:500px;margin-bottom:20px;}
+
+    .card{background:#fff;padding:16px;border-radius:14px;border:1px solid #e2e8f0;}
+    .three-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+    .price{font-size:22px;font-weight:700;margin-bottom:8px;}
+    .check{color:green;margin-right:5px;}
+
+    .contact-card{background:#0f172a;color:#fff;border-radius:20px;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+    .form-field{margin-bottom:10px;font-size:14px;display:flex;flex-direction:column;}
+    .form-field input,.form-field textarea,.form-field select{
+      border-radius:10px;border:1px solid #ddd;padding:10px;font-size:14px;
+    }
+    textarea{min-height:70px;}
+
+    footer{padding:20px 0;font-size:14px;border-top:1px solid #e2e8f0;margin-top:40px;}
+    .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;}
+
+    @media(max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .three-cols,.pricing-grid,.contact-card{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="logo">
+        <div class="logo-mark">C</div>
+        <div class="logo-text">CloseMate AI</div>
+      </div>
+      <div class="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="nav-cta secondary">Talk to us</a>
+        <a href="#contact" class="nav-cta">Get Free Pilot</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="hero">
+    <div>
+      <h1 class="hero-title">
+        Close <span class="hero-highlight">2–3× more leads</span> without hiring sales staff.
+      </h1>
+      <p class="hero-subtitle">
+        CloseMate AI replies instantly on WhatsApp/Instagram, qualifies the lead and books appointments for you.
+      </p>
+
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+        Get 7-day free pilot
+      </button>
+      <button class="btn-secondary">Watch demo</button>
+    </div>
+
+    <div>
+      <div class="hero-card">
+        <div class="hero-card-title">Example conversation:</div>
+
+        <div class="lead-bubble">Hi, do you do laser hair removal?</div>
+        <div class="ai-bubble">Yes! Prices start from 149 AED. Which area are you interested in?</div>
+        <div class="lead-bubble">Full legs.</div>
+        <div class="ai-bubble">Full legs is 249 AED. Want me to book a slot for you this week?</div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-card">
+      <div>
+        <h2>Get your AI sales closer</h2>
+        <p style="opacity:.8;">Tell us about your business and get a free 7-day pilot.</p>
+      </div>
+
+      <form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <div class="form-field">
+          <label>Name</label>
+          <input type="text" name="name" placeholder="John Doe"/>
+        </div>
+
+        <div class="form-field">
+          <label>Work Email</label>
+          <input type="email" name="email" placeholder="you@company.com"/>
+        </div>
+
+        <div class="form-field">
+          <label>Business Name</label>
+          <input type="text" name="business" placeholder="Dubai Clinic"/>
+        </div>
+
+        <div class="form-field">
+          <label>WhatsApp Number</label>
+          <input type="text" name="whatsapp" placeholder="+971 55 000 0000"/>
+        </div>
+
+        <div class="form-field">
+          <label>Message</label>
+          <textarea name="message" placeholder="Your services, issues, etc..."></textarea>
+        </div>
+
+        <button class="btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© 2025 CloseMate AI</span>
+    <span>hello@closemate.ai</span>
+  </div>
+</footer>
+
+</body>
+</html>
