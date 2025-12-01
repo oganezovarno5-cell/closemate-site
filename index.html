@@ -414,6 +414,72 @@
       color: var(--text-main);
     }
 
+    /* FAQ (accordion) */
+
+    .faq-items {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .faq-item {
+      border-radius: 14px;
+      border: 1px solid var(--border-subtle);
+      background: #f9f9fb;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .faq-question-text {
+      font-weight: 500;
+      color: var(--text-main);
+    }
+
+    .faq-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      transition: transform 0.18s ease, background 0.18s ease;
+    }
+
+    .faq-answer {
+      font-size: 12px;
+      color: var(--text-muted);
+      padding: 0 12px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      line-height: 1.6;
+      transition: max-height 0.22s ease, opacity 0.18s ease, padding-top 0.18s ease, padding-bottom 0.18s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 120px; /* достаточно для короткого ответа */
+      opacity: 1;
+      padding-top: 4px;
+      padding-bottom: 10px;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(90deg);
+      background: #e5e5ea;
+    }
+
     /* CONTACT */
 
     .contact-grid {
@@ -552,6 +618,7 @@
       <nav>
         <a href="#features">Product</a>
         <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Book a call</a>
         <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
           Get in touch
@@ -704,6 +771,63 @@
         </div>
       </section>
 
+      <!-- FAQ (accordion) -->
+      <section id="faq">
+        <div class="section-inner">
+          <div class="label">FAQ</div>
+          <h2 class="section-title">Questions you might have.</h2>
+          <p class="section-sub">
+            A few quick answers before we talk.
+          </p>
+
+          <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <div class="faq-question-text">Is this just a simple chatbot?</div>
+                <div class="faq-icon">+</div>
+              </div>
+              <div class="faq-answer">
+                CloseMate AI uses modern language models trained on your services and tone,
+                so it understands context and writes natural replies — not just fixed buttons.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <div class="faq-question-text">Can my team still answer messages?</div>
+                <div class="faq-icon">+</div>
+              </div>
+              <div class="faq-answer">
+                Yes. Your team can jump into any conversation at any time. Think of CloseMate
+                as a first-line assistant that handles the routine and keeps things moving.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <div class="faq-question-text">How long does setup usually take?</div>
+                <div class="faq-icon">+</div>
+              </div>
+              <div class="faq-answer">
+                For a typical service business, we can go from zero to a live pilot in about
+                1–2 weeks, depending on how fast we get your pricing and examples of chats.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <div class="faq-question-text">Can we cancel if it doesn’t work for us?</div>
+                <div class="faq-icon">+</div>
+              </div>
+              <div class="faq-answer">
+                Yes. We usually start with a 1–2 month pilot. If CloseMate AI isn’t a fit,
+                you can cancel — no long-term lock-in.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- CONTACT -->
       <section id="contact">
         <div class="section-inner">
@@ -773,7 +897,17 @@
   </div>
 
   <script>
+    // year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('open');
+      });
+    });
   </script>
 </body>
 </html>
+
