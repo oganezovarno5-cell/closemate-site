@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CloseMate AI — WhatsApp Sales Assistant</title>
+  <title>CloseMate AI – WhatsApp Sales Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI WhatsApp assistant that replies in seconds, qualifies leads and books clients for service businesses." />
+  <meta name="description" content="AI WhatsApp sales assistant for modern service businesses." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #f5f5f7;
-      --surface: #ffffff;
-      --text-main: #111827;
-      --text-muted: #6b7280;
-      --accent: #b8914f;
-      --border: #e5e5ea;
-      --radius-xl: 26px;
+      --bg-soft: #ffffff;
+      --text-main: #111111;
+      --text-muted: #6e6e73;
+      --accent: #111111;
+      --border-subtle: #e5e5ea;
+      --radius-xl: 24px;
       --radius-lg: 18px;
       --radius-pill: 999px;
       --shadow-soft: 0 24px 60px rgba(0,0,0,0.08);
-      --max-width: 1040px;
+      --max-width: 980px;
     }
 
     * {
@@ -30,10 +30,9 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
       background: var(--bg);
       color: var(--text-main);
-      -webkit-font-smoothing: antialiased;
       scroll-behavior: smooth;
     }
 
@@ -44,8 +43,8 @@
 
     .page {
       width: 100%;
-      max-width: 1200px;
-      padding: 24px 18px 64px;
+      max-width: 1120px;
+      padding: 24px 20px 72px;
     }
 
     /* HEADER */
@@ -54,16 +53,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 12px;
+      gap: 16px;
       padding: 10px 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.96);
+      background: rgba(255,255,255,0.9);
       border: 1px solid rgba(229,229,234,0.9);
-      box-shadow: 0 18px 45px rgba(0,0,0,0.06);
-      position: sticky;
-      top: 14px;
-      z-index: 20;
       backdrop-filter: blur(16px);
+      position: sticky;
+      top: 16px;
+      z-index: 20;
     }
 
     .logo {
@@ -75,20 +73,20 @@
     .logo-mark {
       width: 32px;
       height: 32px;
-      border-radius: 12px;
-      background: #111827;
+      border-radius: 10px;
+      background: #111111;
+      color: #f5f5f7;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #f9fafb;
       font-weight: 600;
       font-size: 15px;
     }
 
     .logo-text-main {
       font-weight: 600;
-      font-size: 14px;
-      letter-spacing: 0.08em;
+      font-size: 15px;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
     }
 
@@ -100,15 +98,16 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
       font-size: 13px;
+      color: var(--text-muted);
     }
 
     nav a {
       text-decoration: none;
       color: var(--text-muted);
-      padding: 6px 10px;
-      border-radius: var(--radius-pill);
+      padding: 6px 8px;
+      border-radius: 999px;
       transition: background 0.15s ease, color 0.15s ease;
     }
 
@@ -119,7 +118,7 @@
 
     .btn {
       border-radius: var(--radius-pill);
-      padding: 8px 18px;
+      padding: 8px 16px;
       font-size: 13px;
       font-weight: 500;
       border: none;
@@ -127,38 +126,38 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
       white-space: nowrap;
     }
 
     .btn-primary {
-      background: #111827;
-      color: #f9fafb;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+      background: #111111;
+      color: #f5f5f7;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.22);
     }
 
     .btn-primary:hover {
-      filter: brightness(1.03);
       transform: translateY(-1px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
     }
 
     .btn-ghost {
       background: transparent;
       color: var(--text-main);
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
     }
 
     .btn-ghost:hover {
       background: #e5e5ea;
     }
 
-    /* HERO */
+    /* MAIN */
 
     main {
-      margin-top: 32px;
+      margin-top: 40px;
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 56px;
     }
 
     section {
@@ -166,42 +165,56 @@
       margin: 0 auto;
     }
 
+    .section-inner {
+      background: var(--bg-soft);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border-subtle);
+      padding: 30px 26px 32px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .label {
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      margin: 0 0 4px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      max-width: 420px;
+      line-height: 1.6;
+    }
+
+    /* HERO */
+
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-      gap: 32px;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 40px;
       align-items: center;
     }
 
-    .label-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px;
-      border-radius: var(--radius-pill);
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.9);
-      font-size: 11px;
+    .eyebrow {
+      font-size: 12px;
       color: var(--text-muted);
       margin-bottom: 12px;
     }
 
-    .label-pill span {
-      padding: 3px 8px;
-      border-radius: var(--radius-pill);
-      background: rgba(184,145,79,0.08);
-      color: var(--accent);
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
     h1 {
-      font-size: clamp(30px, 4vw, 40px);
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin: 0 0 12px;
+      font-size: clamp(32px, 4.2vw, 40px);
       font-weight: 600;
+      letter-spacing: -0.04em;
+      margin: 0 0 10px;
     }
 
     h1 span.accent {
@@ -211,9 +224,9 @@
     .hero-sub {
       font-size: 14px;
       color: var(--text-muted);
-      max-width: 430px;
+      max-width: 420px;
       line-height: 1.7;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .hero-cta-row {
@@ -225,23 +238,23 @@
     }
 
     .hero-note {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--text-muted);
     }
 
     .hero-metrics {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
       margin-top: 14px;
       font-size: 12px;
     }
 
     .metric-pill {
-      padding: 6px 11px;
+      padding: 6px 10px;
       border-radius: var(--radius-pill);
-      background: #ffffff;
-      border: 1px solid var(--border);
+      background: #f5f5f7;
+      border: 1px solid var(--border-subtle);
       color: var(--text-muted);
       display: inline-flex;
       align-items: center;
@@ -250,37 +263,38 @@
 
     .metric-pill strong {
       color: var(--text-main);
+      font-weight: 500;
     }
 
     .hero-card {
       border-radius: var(--radius-xl);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 18px 16px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border-subtle);
+      padding: 20px 18px 18px;
       box-shadow: var(--shadow-soft);
       max-width: 360px;
       margin-left: auto;
+      font-size: 13px;
     }
 
     .hero-card-title {
-      font-size: 13px;
       font-weight: 500;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .hero-chat {
-      background: #f9fafb;
       border-radius: 14px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
+      background: #f9f9fb;
       padding: 10px;
-      font-size: 12px;
       display: flex;
       flex-direction: column;
       gap: 8px;
+      font-size: 12px;
     }
 
     .chat-bubble {
-      max-width: 90%;
+      max-width: 92%;
       padding: 7px 9px;
       border-radius: 10px;
       line-height: 1.4;
@@ -289,104 +303,81 @@
     .chat-bubble.client {
       align-self: flex-start;
       background: #ffffff;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
     }
 
     .chat-bubble.ai {
       align-self: flex-end;
-      background: #eef2ff;
-      border: 1px solid rgba(17,24,39,0.16);
+      background: #e5e5ea;
+      border: 1px solid rgba(0,0,0,0.08);
     }
 
     .chat-foot {
-      margin-top: 6px;
-      display: flex;
-      justify-content: space-between;
       font-size: 11px;
       color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      margin-top: 6px;
     }
 
     /* FEATURES */
 
-    .section-inner {
-      background: var(--surface);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-soft);
-      padding: 22px 20px 24px;
-    }
-
-    .section-title {
-      font-size: 20px;
-      margin: 0 0 6px;
-      letter-spacing: -0.02em;
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin: 0;
-    }
-
-    .features-grid {
+    .features-row {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
-      margin-top: 20px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
     }
 
     .feature-card {
-      background: #f9fafb;
+      background: #f9f9fb;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 12px 11px;
-      font-size: 12px;
+      padding: 14px 12px;
+      border: 1px solid var(--border-subtle);
+      font-size: 13px;
     }
 
     .feature-title {
       font-weight: 500;
       margin-bottom: 4px;
-      font-size: 13px;
     }
 
     .feature-text {
+      font-size: 12px;
       color: var(--text-muted);
       line-height: 1.6;
     }
 
     /* PRICING */
 
-    #pricing .section-inner {
-      background: linear-gradient(135deg, #ffffff, #f8f8fa);
-    }
-
-    .pricing-grid {
+    .pricing-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
+      gap: 16px;
       margin-top: 20px;
     }
 
     .pricing-card {
-      background: #f9fafb;
+      background: #f9f9fb;
       border-radius: var(--radius-lg);
-      border: 1px solid var(--border);
-      padding: 14px 13px;
-      font-size: 12px;
+      border: 1px solid var(--border-subtle);
+      padding: 16px 14px;
+      font-size: 13px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
+      align-items: flex-start;
     }
 
     .pricing-card.highlight {
       background: #ffffff;
+      border-color: #111111;
       box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-      border-color: var(--accent);
     }
 
     .pricing-name {
-      font-weight: 500;
-      font-size: 13px;
+      font-weight: 600;
+      font-size: 14px;
     }
 
     .pricing-price {
@@ -400,13 +391,18 @@
     .pricing-price span {
       font-size: 11px;
       color: var(--text-muted);
-      font-weight: 400;
+    }
+
+    .pricing-desc {
+      font-size: 12px;
+      color: var(--text-muted);
     }
 
     .pricing-list {
       list-style: none;
       padding: 0;
       margin: 4px 0 0;
+      font-size: 12px;
       color: var(--text-muted);
       display: flex;
       flex-direction: column;
@@ -415,33 +411,23 @@
 
     .pricing-list li::before {
       content: "• ";
-      color: var(--accent);
-    }
-
-    .pricing-note {
-      margin-top: 10px;
-      font-size: 11px;
-      color: var(--text-muted);
+      color: var(--text-main);
     }
 
     /* CONTACT */
 
-    #contact .section-inner {
-      background: #ffffff;
-    }
-
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.9fr);
       gap: 20px;
-      margin-top: 18px;
-      font-size: 13px;
+      margin-top: 20px;
     }
 
     form {
       display: grid;
       grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 10px 12px;
+      gap: 10px 14px;
+      font-size: 13px;
     }
 
     .form-full {
@@ -459,18 +445,17 @@
       width: 100%;
       padding: 8px 10px;
       border-radius: 12px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--border-subtle);
       font-size: 13px;
       font-family: inherit;
       background: #ffffff;
       outline: none;
-      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
     input:focus, select:focus, textarea:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 1px rgba(184,145,79,0.18);
-      background: #fdfbf7;
+      border-color: #111111;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
     }
 
     textarea {
@@ -479,23 +464,18 @@
     }
 
     .form-footnote {
-      grid-column: 1 / -1;
       font-size: 11px;
       color: var(--text-muted);
-      margin-top: 2px;
+      margin-top: 4px;
     }
 
-    .contact-side {
-      font-size: 12px;
+    .contact-text {
+      font-size: 13px;
       color: var(--text-muted);
+      line-height: 1.7;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-    }
-
-    .contact-side strong {
-      font-size: 13px;
-      color: var(--text-main);
+      gap: 12px;
     }
 
     a.link-muted {
@@ -512,9 +492,9 @@
 
     footer {
       max-width: var(--max-width);
-      margin: 32px auto 0;
-      padding-top: 16px;
-      border-top: 1px solid var(--border);
+      margin: 40px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--border-subtle);
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
@@ -530,26 +510,27 @@
         display: none;
       }
       .hero {
-        grid-template-columns: minmax(0,1fr);
+        grid-template-columns: minmax(0, 1fr);
       }
       .hero-card {
-        margin: 20px auto 0;
+        margin: 24px auto 0;
       }
-      .features-grid,
-      .pricing-grid,
+      .features-row,
+      .pricing-row,
       .contact-grid {
         grid-template-columns: minmax(0,1fr);
       }
       .section-inner {
-        padding: 20px 16px 22px;
+        padding: 24px 18px 26px;
       }
     }
 
     @media (max-width: 600px) {
       .page {
-        padding-inline: 12px;
+        padding-inline: 14px;
       }
       header {
+        border-radius: 16px;
         padding-inline: 14px;
       }
       form {
@@ -582,16 +563,13 @@
       <!-- HERO -->
       <section class="hero">
         <div>
-          <div class="label-pill">
-            <span>New</span>
-            AI that answers your WhatsApp in seconds
-          </div>
+          <div class="eyebrow">AI for modern service businesses</div>
           <h1>
-            Turn your WhatsApp into a <span class="accent">closer</span>, not just a chat.
+            Turn your WhatsApp into a <span class="accent">sales assistant</span>.
           </h1>
           <p class="hero-sub">
-            CloseMate AI replies to leads, asks smart questions and moves people
-            to a booking — so your team can focus on the work, not the inbox.
+            CloseMate AI replies in seconds, qualifies leads and moves them to a booking —
+            without another person glued to the phone.
           </p>
           <div class="hero-cta-row">
             <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
@@ -602,7 +580,7 @@
             </button>
           </div>
           <div class="hero-note">
-            Short pilot first. No long-term contract.
+            Start with a short pilot. No long contracts.
           </div>
           <div class="hero-metrics">
             <div class="metric-pill">
@@ -616,24 +594,26 @@
 
         <div>
           <div class="hero-card">
-            <div class="hero-card-title">How it feels in WhatsApp</div>
+            <div class="hero-card-title">How it feels for your client</div>
             <div class="hero-chat">
               <div class="chat-bubble client">
-                Hi, do you have availability for a facial this week?
+                Hi, can you tell me about your facial treatments?
               </div>
               <div class="chat-bubble ai">
-                Hi 👋 Yes, we do. Are you looking for deep cleansing, hydrafacial or anti-aging?
+                Hi 👋 Sure. Are you looking for deep cleansing, hydrafacial
+                or anti-age treatments?
               </div>
               <div class="chat-bubble client">
                 Hydrafacial.
               </div>
               <div class="chat-bubble ai">
-                Great choice. I can offer Wed 6–8 PM or Thu 4–7 PM. What works better for you?
+                Great choice. I can offer you this Thu or Fri evening.
+                Which day works better for you?
               </div>
             </div>
             <div class="chat-foot">
               <span>AI assistant · 24/7</span>
-              <span>WhatsApp • optional voice</span>
+              <span>WhatsApp native</span>
             </div>
           </div>
         </div>
@@ -642,28 +622,30 @@
       <!-- FEATURES -->
       <section id="features">
         <div class="section-inner">
+          <div class="label">Product</div>
           <h2 class="section-title">What CloseMate AI does.</h2>
           <p class="section-sub">
-            A quiet assistant in the background, handling most of the typing for you.
+            A focused AI agent that lives inside your WhatsApp Business and behaves
+            like a well-trained sales teammate.
           </p>
 
-          <div class="features-grid">
+          <div class="features-row">
             <div class="feature-card">
-              <div class="feature-title">Answers instantly</div>
+              <div class="feature-title">Replies instantly</div>
               <div class="feature-text">
-                Leads get a clear response in seconds, not hours — even when your team is busy or offline.
+                Answers new leads in seconds with clear, human messages — day and night.
               </div>
             </div>
             <div class="feature-card">
-              <div class="feature-title">Qualifies & suggests</div>
+              <div class="feature-title">Asks the right questions</div>
               <div class="feature-text">
-                Asks a few short questions, understands what the person needs and suggests the best option.
+                Qualifies people with 2–3 simple questions instead of sending long menus.
               </div>
             </div>
             <div class="feature-card">
-              <div class="feature-title">Books & follows up</div>
+              <div class="feature-title">Guides to booking</div>
               <div class="feature-text">
-                Offers times, confirms bookings and sends gentle follow-ups when someone goes quiet.
+                Suggests times, confirms details and follows up when someone disappears.
               </div>
             </div>
           </div>
@@ -673,21 +655,23 @@
       <!-- PRICING -->
       <section id="pricing">
         <div class="section-inner">
-          <h2 class="section-title">Simple pricing.</h2>
+          <div class="label">Pricing</div>
+          <h2 class="section-title">One product. Three simple plans.</h2>
           <p class="section-sub">
-            One subscription, no hidden tricks.
+            Monthly subscription. Cancel anytime after the pilot.
           </p>
 
-          <div class="pricing-grid">
+          <div class="pricing-row">
             <div class="pricing-card">
               <div class="pricing-name">Starter</div>
               <div class="pricing-price">
                 $299 <span>/ month</span>
               </div>
+              <div class="pricing-desc">For testing AI on one WhatsApp channel.</div>
               <ul class="pricing-list">
-                <li>Up to ~300 conversations</li>
-                <li>One WhatsApp number</li>
-                <li>Basic flows & support</li>
+                <li>Up to ~300 conversations / month</li>
+                <li>Single language</li>
+                <li>Basic FAQ & booking flow</li>
               </ul>
             </div>
 
@@ -696,10 +680,11 @@
               <div class="pricing-price">
                 $499 <span>/ month</span>
               </div>
+              <div class="pricing-desc">For teams that live in WhatsApp daily.</div>
               <ul class="pricing-list">
-                <li>Up to ~1,000 conversations</li>
-                <li>Advanced flows & follow-up</li>
-                <li>Priority support</li>
+                <li>Up to ~1,000 conversations / month</li>
+                <li>Advanced qualification & follow-up</li>
+                <li>Multi-step booking journeys</li>
               </ul>
             </div>
 
@@ -708,16 +693,13 @@
               <div class="pricing-price">
                 $799 <span>/ month</span>
               </div>
+              <div class="pricing-desc">For brands with multiple locations.</div>
               <ul class="pricing-list">
-                <li>High volume</li>
-                <li>Custom logic & integrations</li>
-                <li>Dedicated contact</li>
+                <li>2,500+ conversations / month</li>
+                <li>Custom flows & light integrations</li>
+                <li>Dedicated success contact</li>
               </ul>
             </div>
-          </div>
-
-          <div class="pricing-note">
-            One-time setup: usually $400–$900, depending on complexity.
           </div>
         </div>
       </section>
@@ -725,17 +707,19 @@
       <!-- CONTACT -->
       <section id="contact">
         <div class="section-inner">
-          <h2 class="section-title">Book a call.</h2>
+          <div class="label">Book a call</div>
+          <h2 class="section-title">Tell us about your business.</h2>
           <p class="section-sub">
-            Tell us who you are — we’ll reply with a time and a short demo.
+            Leave your details and we’ll schedule a short call to walk through a demo
+            and see if CloseMate AI fits you.
           </p>
 
           <div class="contact-grid">
             <div>
-              <!-- TODO: заменишь action на свой endpoint -->
+              <!-- TODO: поменяй action на свой endpoint (Formspree, backend и т.п.) -->
               <form action="https://example.com/endpoint" method="POST">
                 <div>
-                  <label for="name">Name</label>
+                  <label for="name">Your name</label>
                   <input type="text" id="name" name="name" required placeholder="John Doe" />
                 </div>
                 <div>
@@ -743,7 +727,7 @@
                   <input type="text" id="company" name="company" required placeholder="Your brand" />
                 </div>
                 <div>
-                  <label for="email">Work email</label>
+                  <label for="email">Email</label>
                   <input type="email" id="email" name="email" required placeholder="you@company.com" />
                 </div>
                 <div>
@@ -751,28 +735,30 @@
                   <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 555 123 4567" />
                 </div>
                 <div class="form-full">
-                  <label for="message">What do you want CloseMate to help with?</label>
-                  <textarea id="message" name="message" placeholder="Short note is enough."></textarea>
+                  <label for="message">What do you use WhatsApp for today?</label>
+                  <textarea id="message" name="message" placeholder="Short description is enough."></textarea>
                 </div>
                 <div class="form-full">
-                  <button type="submit" class="btn btn-primary">Send request</button>
+                  <button type="submit" class="btn btn-primary">Request a call</button>
                 </div>
-                <div class="form-footnote">
-                  We use your details only to contact you about CloseMate AI.
+                <div class="form-full form-footnote">
+                  We’ll only use your details to contact you about CloseMate AI.
                 </div>
               </form>
             </div>
 
-            <div class="contact-side">
+            <div class="contact-text">
               <div>
-                <strong>What happens next?</strong><br/>
-                We read your message and usually reply within 1–2 business days with a proposed time for a call.
-              </div>
-              <div>
-                <strong>Prefer to write directly?</strong><br/>
-                <!-- TODO: свои контакты -->
+                Prefer to reach out yourself?<br/>
+                <!-- TODO: замени контакты на свои -->
                 <a href="mailto:hello@closemate.ai" class="link-muted">hello@closemate.ai</a><br/>
                 <a href="https://wa.me/0000000000000" class="link-muted" target="_blank">Message on WhatsApp</a>
+              </div>
+              <div>
+                Typical process:<br/>
+                – 15–20 min intro call<br/>
+                – short demo on your use case<br/>
+                – 1–2 month pilot if it makes sense
               </div>
             </div>
           </div>
@@ -781,8 +767,8 @@
     </main>
 
     <footer>
-      <div>© <span id="year"></span> CloseMate AI</div>
-      <div>Built for service businesses that live in WhatsApp.</div>
+      <div>© <span id="year"></span> CloseMate AI.</div>
+      <div>Built for teams that sell through WhatsApp.</div>
     </footer>
   </div>
 
