@@ -2,1110 +2,1120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CloseMate AI – 24/7 AI Sales Closer for Small Businesses</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="CloseMate AI is a 24/7 AI sales closer that responds to leads instantly, qualifies them and books calls for you. Built for small businesses."
-  />
+  <title>CloseMate AI — WhatsApp Sales Assistant for Dubai Businesses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="AI WhatsApp sales assistant for Dubai service businesses. Instantly reply to leads, qualify, follow up and book appointments — without hiring extra staff." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-main: #050816;
+      --bg-soft: #0b1020;
+      --accent: #ffb347;      /* soft warm accent (desert/sunset) */
+      --accent-soft: rgba(255,179,71,0.18);
+      --text-main: #f9fafb;
+      --text-muted: #9ca3af;
+      --border-subtle: #1f2933;
+      --card-bg: #0d1224;
+      --danger: #ef4444;
+      --success: #22c55e;
+      --shadow-soft: 0 18px 45px rgba(0,0,0,0.45);
+      --radius-xl: 22px;
+      --radius-lg: 16px;
+      --radius-pill: 999px;
+      --max-width: 1120px;
+    }
+
     * {
       box-sizing: border-box;
+    }
+
+    html, body {
       margin: 0;
       padding: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #111827 0, #020617 55%, #000 100%);
+      color: var(--text-main);
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      color: #0f172a;
-      background-color: #f8fafc;
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    .page-wrapper {
-      min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1320px;
+      padding: 20px 16px 64px;
     }
 
     header {
-      border-bottom: 1px solid #e2e8f0;
-      background-color: #ffffff;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    .nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 14px 0;
+      gap: 16px;
+      padding: 10px 16px;
+      border-radius: var(--radius-pill);
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(5,12,30,0.95));
+      border: 1px solid rgba(148,163,184,0.14);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      position: sticky;
+      top: 16px;
+      z-index: 20;
+      backdrop-filter: blur(18px);
     }
 
     .logo {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 9px;
     }
 
     .logo-mark {
       width: 32px;
       height: 32px;
-      border-radius: 999px;
-      border: 2px solid #0f172a;
+      border-radius: 14px;
+      background: radial-gradient(circle at 20% 0%, #fff7ed 0, #fed7aa 18%, #fb923c 45%, #f97316 70%, #c2410c 100%);
       display: flex;
       align-items: center;
       justify-content: center;
+      color: #111827;
       font-weight: 700;
-      font-size: 18px;
+      font-size: 16px;
+      box-shadow: 0 10px 25px rgba(248, 181, 91, 0.5);
     }
 
-    .logo-text {
+    .logo-text-main {
       font-weight: 600;
-      font-size: 18px;
+      letter-spacing: 0.02em;
+      font-size: 15px;
     }
 
-    .nav-links {
+    .logo-text-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    nav {
       display: flex;
       align-items: center;
-      gap: 20px;
-      font-size: 14px;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--text-muted);
     }
 
-    .nav-links a {
-      opacity: 0.8;
-    }
-
-    .nav-links a:hover {
-      opacity: 1;
-    }
-
-    .nav-cta {
-      padding: 8px 16px;
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid #0f172a;
-      font-size: 14px;
-      font-weight: 500;
-      background-color: #0f172a;
-      color: #ffffff;
+      transition: all 0.18s ease;
     }
 
-    .nav-cta.secondary {
-      background-color: #ffffff;
-      color: #0f172a;
+    nav a:hover {
+      color: var(--text-main);
+      background: rgba(148,163,184,0.12);
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.18s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(140deg, #fed7aa, #f97316);
+      color: #111827;
+      box-shadow: 0 14px 30px rgba(248,181,91,0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 38px rgba(248,181,91,0.60);
+      filter: brightness(1.02);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid rgba(148,163,184,0.45);
+    }
+
+    .btn-ghost:hover {
+      border-color: rgba(248,181,91,0.7);
+      color: var(--text-main);
+      background: rgba(148,163,184,0.08);
     }
 
     main {
-      flex: 1;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 72px;
     }
 
-    /* Hero */
     .hero {
-      padding: 48px 0 40px;
-    }
-
-    .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2.5fr);
+      grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.1fr);
       gap: 40px;
       align-items: center;
     }
 
-    .badge {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
       gap: 8px;
       padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid #e2e8f0;
-      background-color: #ffffff;
       font-size: 11px;
+      border: 1px solid rgba(148,163,184,0.4);
+      background: radial-gradient(circle at 0 0, rgba(248,250,252,0.12), rgba(15,23,42,0.85));
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .eyebrow-pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 0.08em;
+      background: rgba(34,197,94,0.12);
+      color: #4ade80;
     }
 
-    .hero-title {
-      font-size: 32px;
-      font-weight: 700;
-      margin-top: 16px;
-      margin-bottom: 10px;
-      letter-spacing: -0.03em;
+    h1 {
+      font-size: clamp(30px, 4vw, 40px);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      margin: 0 0 16px;
     }
 
-    .hero-highlight {
-      background: #e0f2fe;
-      padding: 2px 6px;
-      border-radius: 6px;
+    h1 span.accent {
+      background: linear-gradient(135deg, #fed7aa, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
     }
 
-    .hero-subtitle {
-      font-size: 15px;
-      opacity: 0.85;
+    .hero-sub {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-muted);
       max-width: 480px;
-      margin-bottom: 24px;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .btn-primary {
-      padding: 10px 20px;
-      border-radius: 999px;
-      border: none;
-      background-color: #0f172a;
-      color: #ffffff;
-      font-size: 14px;
-      font-weight: 500;
-      cursor: pointer;
-    }
-
-    .btn-secondary {
-      padding: 10px 20px;
-      border-radius: 999px;
-      background-color: #e2e8f0;
-      color: #0f172a;
-      font-size: 14px;
-      font-weight: 500;
-      border: none;
-      cursor: pointer;
-    }
-
-    .hero-note {
-      font-size: 12px;
-      opacity: 0.75;
+      margin-bottom: 22px;
     }
 
     .hero-metrics {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
-      gap: 24px;
-      margin-top: 24px;
-    }
-
-    .metric {
+      gap: 16px;
       font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 18px;
     }
 
-    .metric strong {
-      display: block;
-      font-size: 16px;
+    .metric-pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.35);
+      background: rgba(15,23,42,0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .metric-pill strong {
+      color: var(--text-main);
       font-weight: 600;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .hero-right {
+      position: relative;
     }
 
     .hero-card {
-      background-color: #0f172a;
-      color: #ffffff;
-      border-radius: 18px;
-      padding: 20px;
-      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
-    }
-
-    .hero-card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
-
-    .hero-card-subtitle {
-      font-size: 12px;
-      opacity: 0.8;
-      margin-bottom: 18px;
-    }
-
-    .lead-bubble,
-    .ai-bubble {
-      border-radius: 14px;
-      padding: 10px 12px;
-      font-size: 13px;
-      margin-bottom: 8px;
-      max-width: 260px;
-    }
-
-    .lead-bubble {
-      background-color: #1e293b;
-      margin-left: 0;
-    }
-
-    .ai-bubble {
-      background-color: #f97316;
-      color: #0f172a;
+      border-radius: 26px;
+      background: radial-gradient(circle at 0 0, rgba(248,250,252,0.08), rgba(15,23,42,1));
+      border: 1px solid rgba(148,163,184,0.18);
+      padding: 18px 18px 16px;
+      box-shadow: var(--shadow-soft);
+      max-width: 380px;
       margin-left: auto;
     }
 
-    .card-footer {
-      margin-top: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 11px;
-      opacity: 0.9;
+    .hero-tagline {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 14px;
     }
 
-    .status-pill {
+    .hero-chat {
+      background: rgba(15,23,42,0.95);
+      border-radius: 18px;
+      padding: 12px;
+      border: 1px solid rgba(31,41,55,0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 12px;
+    }
+
+    .chat-row {
+      display: flex;
+      gap: 8px;
+      align-items: flex-end;
+    }
+
+    .chat-bubble {
+      display: inline-block;
+      max-width: 85%;
+      padding: 8px 10px;
+      border-radius: 14px;
+      line-height: 1.4;
+    }
+
+    .chat-bubble.client {
+      background: #020617;
+      border-bottom-left-radius: 4px;
+      border: 1px solid rgba(30,64,175,0.6);
+    }
+
+    .chat-bubble.ai {
+      margin-left: auto;
+      background: linear-gradient(135deg, rgba(248,181,91,0.1), rgba(56,189,248,0.1));
+      border-top-right-radius: 4px;
+      border: 1px solid rgba(148,163,184,0.7);
+    }
+
+    .chat-chip {
+      font-size: 10px;
+      color: var(--text-muted);
+      background: rgba(15,23,42,0.9);
       padding: 4px 8px;
       border-radius: 999px;
-      background-color: #22c55e;
-      color: #0f172a;
-      font-weight: 600;
-      font-size: 11px;
+      border: 1px solid rgba(148,163,184,0.3);
+      align-self: flex-start;
     }
 
-    /* Sections */
-    section {
-      padding: 40px 0;
-      border-top: 1px solid #e2e8f0;
-      background-color: #f8fafc;
-    }
-
-    .section-header {
-      margin-bottom: 24px;
-      text-align: left;
-    }
-
-    .section-kicker {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      opacity: 0.7;
-      margin-bottom: 4px;
-    }
-
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin-bottom: 4px;
-    }
-
-    .section-subtitle {
-      font-size: 14px;
-      opacity: 0.8;
-      max-width: 520px;
-    }
-
-    .three-cols {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background-color: #ffffff;
-      border-radius: 14px;
-      padding: 16px;
-      border: 1px solid #e2e8f0;
-    }
-
-    .card h3 {
-      font-size: 15px;
-      margin-bottom: 6px;
-    }
-
-    .card p {
-      font-size: 13px;
-      opacity: 0.85;
-    }
-
-    .card span.badge-small {
-      display: inline-flex;
+    .chat-footer {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      padding: 3px 8px;
-      border-radius: 999px;
-      font-size: 10px;
-      border: 1px solid #e5e7eb;
-      margin-bottom: 6px;
-      opacity: 0.8;
+      margin-top: 12px;
+      font-size: 11px;
+      color: var(--text-muted);
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 10px;
+      gap: 6px;
+      margin-top: 8px;
     }
 
     .pill {
+      font-size: 10px;
       padding: 4px 8px;
       border-radius: 999px;
+      background: rgba(15,23,42,0.85);
+      border: 1px solid rgba(148,163,184,0.25);
+      color: var(--text-muted);
+    }
+
+    .label {
+      text-transform: uppercase;
       font-size: 11px;
-      background-color: #e5e7eb;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 6px;
     }
 
-    .two-cols {
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-inner {
+      background: radial-gradient(circle at 0 0, rgba(15,23,42,0.85), rgba(2,6,23,1));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148,163,184,0.16);
+      padding: 24px 20px 26px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section-title {
+      font-size: 20px;
+      margin: 0 0 8px;
+      letter-spacing: -0.03em;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      max-width: 520px;
+    }
+
+    .features-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.5fr);
-      gap: 28px;
-      align-items: flex-start;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
     }
 
-    .list {
-      list-style: none;
+    .feature-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 14px 13px;
+      border: 1px solid var(--border-subtle);
       font-size: 13px;
     }
 
-    .list li {
-      margin-bottom: 8px;
+    .feature-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: var(--accent-soft);
       display: flex;
-      align-items: flex-start;
-      gap: 8px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 8px;
+      font-size: 14px;
     }
 
-    .list-bullet {
-      margin-top: 5px;
-      width: 6px;
-      height: 6px;
-      border-radius: 999px;
-      background-color: #0f172a;
-      flex-shrink: 0;
+    .feature-title {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .feature-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    .how-step {
+      background: #020617;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 14px 13px;
+    }
+
+    .step-index {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+
+    .step-title {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+
+    .step-text {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .pricing-section .section-inner {
+      background: radial-gradient(circle at 10% 0, rgba(248,181,91,0.12), #050816);
     }
 
     .pricing-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 20px;
+      gap: 14px;
+      margin-top: 22px;
     }
 
-    .price {
-      font-size: 22px;
+    .pricing-card {
+      background: rgba(5,10,25,0.96);
+      border-radius: var(--radius-xl);
+      padding: 18px 16px 16px;
+      border: 1px solid rgba(148,163,184,0.3);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pricing-card.highlight {
+      border-color: rgba(248,181,91,0.8);
+      box-shadow: 0 18px 40px rgba(248,181,91,0.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 4px 9px;
+      border-radius: 999px;
+      background: rgba(248,181,91,0.18);
+      color: #fed7aa;
+      border: 1px solid rgba(248,181,91,0.7);
+    }
+
+    .pricing-name {
       font-weight: 600;
+      font-size: 14px;
+    }
+
+    .pricing-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .pricing-price {
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+    }
+
+    .pricing-price span {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .pricing-list {
+      list-style: none;
+      padding: 0;
+      margin: 4px 0 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .pricing-list li::before {
+      content: "•";
+      margin-right: 6px;
+      color: var(--accent);
+    }
+
+    .pricing-bottom-note {
+      font-size: 11px;
+      margin-top: 14px;
+      color: var(--text-muted);
+    }
+
+    .pricing-setup {
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+      font-size: 13px;
+    }
+
+    .why-points {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .why-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 7px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .why-dot {
+      margin-top: 5px;
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #fed7aa, #f97316);
+      box-shadow: 0 0 0 3px rgba(248,181,91,0.18);
+    }
+
+    .why-card {
+      background: rgba(5,10,25,0.98);
+      border-radius: var(--radius-lg);
+      padding: 14px 13px;
+      border: 1px solid rgba(148,163,184,0.3);
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .why-stat {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-main);
       margin-bottom: 4px;
     }
 
-    .price span {
-      font-size: 12px;
-      font-weight: 400;
-      opacity: 0.7;
-    }
-
-    .price-list {
-      margin: 12px 0 16px;
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 12px;
+      margin-top: 20px;
       font-size: 13px;
-      list-style: none;
-    }
-
-    .price-list li {
-      margin-bottom: 6px;
-      display: flex;
-      gap: 6px;
-      align-items: flex-start;
-    }
-
-    .check {
-      font-size: 14px;
-      margin-top: 1px;
-    }
-
-    .tag {
-      display: inline-block;
-      padding: 3px 9px;
-      border-radius: 999px;
-      font-size: 11px;
-      background-color: #e0f2fe;
-      color: #0369a1;
-      margin-left: 4px;
     }
 
     .faq-item {
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-      padding: 12px 14px;
-      margin-bottom: 10px;
-      background-color: #ffffff;
+      background: #020617;
+      border-radius: var(--radius-lg);
+      padding: 12px 12px 11px;
+      border: 1px solid var(--border-subtle);
     }
 
     .faq-q {
-      font-size: 14px;
       font-weight: 500;
       margin-bottom: 4px;
     }
 
     .faq-a {
-      font-size: 13px;
-      opacity: 0.9;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
     }
 
-    .contact-card {
-      background-color: #0f172a;
-      color: #ffffff;
-      border-radius: 18px;
-      padding: 20px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.2fr);
-      gap: 24px;
-      align-items: center;
-    }
-
-    .contact-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
-
-    .contact-subtitle {
-      font-size: 13px;
-      opacity: 0.85;
-      margin-bottom: 10px;
-    }
-
-    .contact-note {
-      font-size: 11px;
-      opacity: 0.8;
-    }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .form-field {
+    .contact-strip {
+      margin-top: 22px;
+      padding: 12px 14px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148,163,184,0.4);
       display: flex;
-      flex-direction: column;
-      gap: 4px;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
       font-size: 12px;
-    }
-
-    .form-field input,
-    .form-field textarea,
-    .form-field select {
-      border-radius: 10px;
-      border: 1px solid #e5e7eb;
-      padding: 7px 9px;
-      font-size: 12px;
-      outline: none;
-    }
-
-    .form-field input:focus,
-    .form-field textarea:focus,
-    .form-field select:focus {
-      border-color: #38bdf8;
-      box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.4);
-    }
-
-    .form-field textarea {
-      resize: vertical;
-      min-height: 60px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.96), rgba(3,7,18,0.96));
     }
 
     footer {
-      border-top: 1px solid #e2e8f0;
-      padding: 16px 0;
-      font-size: 12px;
-      background-color: #ffffff;
-    }
-
-    .footer-inner {
+      max-width: var(--max-width);
+      margin: 36px auto 0;
+      padding-top: 18px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      font-size: 11px;
+      color: var(--text-muted);
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       justify-content: space-between;
-      gap: 12px;
-      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      opacity: 0.8;
+    a.link-muted {
+      color: var(--text-muted);
+      text-decoration: none;
     }
 
-    /* Responsive */
+    a.link-muted:hover {
+      color: var(--text-main);
+      text-decoration: underline;
+    }
+
     @media (max-width: 900px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
+      header {
+        padding-inline: 14px;
       }
-      .hero-card {
-        margin-top: 16px;
-      }
-      .three-cols,
-      .pricing-grid,
-      .two-cols {
-        grid-template-columns: 1fr;
-      }
-      .contact-card {
-        grid-template-columns: 1fr;
-      }
-      .nav-links {
+
+      nav {
         display: none;
+      }
+
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-right {
+        order: -1;
+      }
+
+      .hero-card {
+        margin-inline: auto;
+      }
+
+      .features-grid,
+      .pricing-grid,
+      .how-grid,
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+
+      .section-inner {
+        padding: 20px 16px 22px;
       }
     }
 
     @media (max-width: 600px) {
-      .hero-title {
-        font-size: 26px;
+      .page {
+        padding-inline: 12px;
       }
-      .section-title {
-        font-size: 19px;
-      }
-      .container {
-        padding: 0 12px;
+      header {
+        border-radius: 18px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="page-wrapper">
+  <div class="page">
     <header>
-      <div class="container">
-        <nav class="nav">
-          <div class="logo">
-            <div class="logo-mark">C</div>
-            <div class="logo-text">CloseMate AI</div>
-          </div>
-          <div class="nav-links">
-            <a href="#how-it-works">How it works</a>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact" class="nav-cta secondary">Talk to us</a>
-            <a href="#contact" class="nav-cta">Get free pilot</a>
-          </div>
-        </nav>
+      <div class="logo">
+        <div class="logo-mark">C</div>
+        <div>
+          <div class="logo-text-main">CloseMate AI</div>
+          <div class="logo-text-sub">WhatsApp sales for Dubai businesses</div>
+        </div>
       </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#why-dubai">Why Dubai</a>
+        <a href="#faq">FAQ</a>
+        <button class="btn btn-ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+          Book a demo
+        </button>
+      </nav>
     </header>
 
     <main>
-      <!-- Hero -->
+      <!-- HERO -->
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="badge">
-              <span>24/7 AI sales closer</span>
-            </div>
-            <h1 class="hero-title">
-              Close <span class="hero-highlight">2–3× more leads</span>
-              without hiring a sales team.
-            </h1>
-            <p class="hero-subtitle">
-              CloseMate AI instantly answers every new lead, qualifies them and
-              books calls for you over WhatsApp, website chat or Instagram DMs.
-              No more “sorry, we missed your message”.
-            </p>
-            <div class="hero-cta">
-              <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                Get 7-day free pilot
-              </button>
-              <button class="btn-secondary">
-                Watch 2-min product demo
-              </button>
-            </div>
-            <p class="hero-note">
-              No credit card. We set everything up for you.
-            </p>
-
-            <div class="hero-metrics">
-              <div class="metric">
-                <strong>3.8×</strong>
-                faster lead response on average
-              </div>
-              <div class="metric">
-                <strong>47%</strong>
-                more leads converted to calls
-              </div>
-              <div class="metric">
-                <strong>24/7</strong>
-                always-on AI sales closer
-              </div>
-            </div>
+        <div class="hero-left">
+          <div class="eyebrow">
+            <span class="eyebrow-pill">Built for Dubai</span>
+            24/7 AI WhatsApp sales assistant
           </div>
-          <div>
-            <div class="hero-card">
-              <div class="hero-card-title">Your AI sales closer</div>
-              <div class="hero-card-subtitle">
-                Example conversation with a new lead:
-              </div>
-              <div class="lead-bubble">
-                Hey, I'm looking for teeth whitening. How much does it cost and
-                when you have free slots?
-              </div>
-              <div class="ai-bubble">
-                Hi 👋 Sure, we can help! Our teeth whitening starts at $249.
-                When works better for you – weekday evenings or weekend?
-              </div>
-              <div class="lead-bubble">
-                Weekend, around afternoon.
-              </div>
-              <div class="ai-bubble">
-                Great. I can book you this Saturday at 3:30 PM with Dr. Smith.
-                Shall I confirm the appointment under your name and phone
-                number?
-              </div>
-              <div class="card-footer">
-                <span>Channel: WhatsApp Business</span>
-                <span class="status-pill">Lead booked ✅</span>
-              </div>
+          <h1>
+            Turn your WhatsApp into a <span class="accent">closing machine</span> —
+            without hiring extra staff.
+          </h1>
+          <p class="hero-sub">
+            CloseMate AI replies to your WhatsApp leads in seconds, qualifies them,
+            follows up, and books appointments — so your team can focus on delivery,
+            not typing the same messages all day.
+          </p>
+          <div class="hero-cta-row">
+            <!-- TODO: вставь сюда свой реальный WhatsApp/сайт -->
+            <a href="https://wa.me/0000000000000" class="btn btn-primary">
+              Book a WhatsApp demo
+              <span>↗</span>
+            </a>
+            <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+              View pricing
+            </button>
+          </div>
+          <div class="hero-metrics">
+            <div class="metric-pill">
+              <strong>5–10 sec</strong> reply time on WhatsApp
             </div>
+            <div class="metric-pill">
+              <strong>+20–35%</strong> more booked appointments*
+            </div>
+            <span class="hero-note">*based on early pilot results &amp; industry benchmarks.</span>
           </div>
         </div>
-      </section>
 
-      <!-- Problems -->
-      <section id="problems">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">The problem</div>
-            <h2 class="section-title">
-              Most small businesses are leaking money in their inbox.
-            </h2>
-            <p class="section-subtitle">
-              Your ads and reputation bring leads. But slow replies and busy
-              staff kill deals before they start.
-            </p>
-          </div>
-
-          <div class="three-cols">
-            <div class="card">
-              <h3>Leads wait hours for an answer</h3>
-              <p>
-                People message you on WhatsApp, Instagram or website – and you
-                are in a meeting, driving or simply closed. After 15 minutes
-                they are already messaging your competitors.
-              </p>
-            </div>
-            <div class="card">
-              <h3>Managers forget to follow up</h3>
-              <p>
-                Human sales reps get tired, forget to reply and don't follow a
-                clear script. Your conversion depends on their mood and energy.
-              </p>
-            </div>
-            <div class="card">
-              <h3>No clear process, no clear numbers</h3>
-              <p>
-                You don't see how many leads you received, how fast you replied
-                and where you lost the deal. You are “busy”, but not closing at
-                your potential.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- How it works -->
-      <section id="how-it-works">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">How it works</div>
-            <h2 class="section-title">Set it up once. Close deals every day.</h2>
-            <p class="section-subtitle">
-              We connect CloseMate AI to your existing channels and train it on
-              your offers, prices and way of speaking.
-            </p>
-          </div>
-
-          <div class="three-cols">
-            <div class="card">
-              <span class="badge-small">Step 1</span>
-              <h3>Connect your lead channels</h3>
-              <p>
-                We plug into your WhatsApp Business, website forms and (soon)
-                Instagram DMs. Every new lead is sent to CloseMate AI in real
-                time.
-              </p>
-            </div>
-            <div class="card">
-              <span class="badge-small">Step 2</span>
-              <h3>Train AI on your business</h3>
-              <p>
-                We upload your services, prices, FAQs and tone of voice. AI
-                learns how to talk like your best salesperson – but always
-                polite, on-brand and compliant.
-              </p>
-            </div>
-            <div class="card">
-              <span class="badge-small">Step 3</span>
-              <h3>Qualify and book the lead</h3>
-              <p>
-                CloseMate AI asks the right questions, handles objections and
-                books the call or appointment in your calendar. You get a
-                summary in email or CRM.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Features -->
-      <section id="features">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Features</div>
-            <h2 class="section-title">Everything your first sales hire would do.</h2>
-            <p class="section-subtitle">
-              But faster, always available and for a flat monthly fee.
-            </p>
-          </div>
-
-          <div class="two-cols">
-            <div>
-              <ul class="list">
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>24/7 instant responses</strong><br />
-                    CloseMate AI replies to new leads in seconds, even at
-                    midnight or on weekends.
-                  </div>
-                </li>
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>Smart lead qualification</strong><br />
-                    Budget, timing, service type, location – AI collects all
-                    that before sending the lead to you.
-                  </div>
-                </li>
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>Calendar booking</strong><br />
-                    Integrates with Google Calendar or your booking system to
-                    schedule appointments automatically.
-                  </div>
-                </li>
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>Sales scripts baked-in</strong><br />
-                    We preload best-practice sales flows, so your AI closer
-                    handles objections and nudges to a decision.
-                  </div>
-                </li>
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>Analytics & reporting</strong><br />
-                    Track response time, number of leads, booking rate and
-                    reasons for lost deals.
-                  </div>
-                </li>
-                <li>
-                  <div class="list-bullet"></div>
-                  <div>
-                    <strong>Human hand-off when needed</strong><br />
-                    AI can hand the conversation to a real agent with full
-                    context when the lead is ready to talk.
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div class="card">
-                <h3>Built for real businesses</h3>
-                <p>
-                  CloseMate AI works especially well for:
-                </p>
-                <div class="pill-row" style="margin-top: 8px;">
-                  <span class="pill">Beauty & clinics</span>
-                  <span class="pill">Car services</span>
-                  <span class="pill">Fitness & coaching</span>
-                  <span class="pill">Cleaning services</span>
-                  <span class="pill">Real estate</span>
-                  <span class="pill">Private schools & courses</span>
+        <div class="hero-right">
+          <div class="hero-card">
+            <div class="hero-tagline">Example flow — beauty clinic in Dubai</div>
+            <div class="hero-chat">
+              <div class="chat-row">
+                <div class="chat-bubble client">
+                  Hi, I saw your Instagram. Do you have availability for facial this week?
                 </div>
-                <p style="margin-top: 14px; font-size: 13px;">
-                  If your business generates leads online and you are losing
-                  them because “we replied too late”, CloseMate AI is for you.
-                </p>
+              </div>
+              <div class="chat-row">
+                <div class="chat-bubble ai">
+                  Hi 👋 Yes, we do. Are you looking for deep cleansing, hydrafacial
+                  or anti-aging treatment?
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-bubble client">
+                  Hydrafacial.
+                </div>
+              </div>
+              <div class="chat-row">
+                <div class="chat-bubble ai">
+                  Perfect choice. For hydrafacial this week we can offer:
+                  Wed 6–8 PM or Thu 4–7 PM. What works better for you?
+                </div>
+              </div>
+              <div class="chat-row">
+                <span class="chat-chip">AI qualifies &amp; books in 5 messages</span>
+              </div>
+              <div class="chat-footer">
+                <span>AI agent active · 24/7</span>
+                <span>WhatsApp • Voice follow-up</span>
+              </div>
+            </div>
+            <div class="pill-row">
+              <div class="pill">Lead qualification</div>
+              <div class="pill">Price explanation</div>
+              <div class="pill">Booking &amp; reminders</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features">
+        <div class="section-inner">
+          <div class="label">What CloseMate AI does</div>
+          <h2 class="section-title">Your AI closer on WhatsApp — for service businesses.</h2>
+          <p class="section-sub">
+            CloseMate AI is a done-for-you WhatsApp assistant that speaks like your best
+            salesperson, never gets tired, and never forgets to follow up. Ideal for
+            clinics, salons, gyms, real estate and other service businesses in Dubai.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <div class="feature-title">Instant 24/7 replies</div>
+              <div class="feature-text">
+                No more “Sorry, we missed your message”. Your leads get an answer
+                in 5–10 seconds — even at night, on Fridays and during busy hours.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🎯</div>
+              <div class="feature-title">Smart lead qualification</div>
+              <div class="feature-text">
+                The AI asks a few friendly questions to understand what the client needs,
+                budget and timing — then guides them to the right service or package.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📅</div>
+              <div class="feature-title">Bookings &amp; reminders</div>
+              <div class="feature-text">
+                Suggests specific time slots, confirms appointments and can send gentle
+                reminders or follow-ups so your calendar stays full.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔁</div>
+              <div class="feature-title">Automatic follow-up</div>
+              <div class="feature-text">
+                If a lead stops replying, CloseMate AI comes back with a polite follow-up,
+                instead of letting the conversation die in the chat list.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📞</div>
+              <div class="feature-title">Voice &amp; call-ready</div>
+              <div class="feature-text">
+                Optionally add AI voice flows for confirmation calls or quick check-ins,
+                with a human fail-safe if the client asks for a real person.
+              </div>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <div class="feature-title">Lightweight analytics</div>
+              <div class="feature-text">
+                See how many leads came through WhatsApp, how many were answered by AI,
+                and how many ended as booked appointments or qualified opportunities.
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Pricing -->
-      <section id="pricing">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">Pricing</div>
-            <h2 class="section-title">Cheaper than one junior sales rep.</h2>
-            <p class="section-subtitle">
-              No setup fee, cancel anytime. We will help you deploy and tune the
-              AI closer for your business.
-            </p>
+      <!-- HOW IT WORKS -->
+      <section>
+        <div class="section-inner">
+          <div class="label">How it works</div>
+          <h2 class="section-title">We set it up for you in days, not months.</h2>
+          <p class="section-sub">
+            No need for an internal tech team. We connect to your WhatsApp Business,
+            train the AI on your offers and style, and supervise the first weeks together.
+          </p>
+
+          <div class="how-grid">
+            <div class="how-step">
+              <div class="step-index">Step 1</div>
+              <div class="step-title">Fast onboarding</div>
+              <div class="step-text">
+                We learn your services, prices, brand tone and existing WhatsApp flows,
+                then design your ideal conversation journeys (FAQ, pricing, booking, etc.).
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-index">Step 2</div>
+              <div class="step-title">AI agent training</div>
+              <div class="step-text">
+                Your AI agent is connected to WhatsApp and configured to speak like
+                your team. For the first days, we run it in supervised mode and adjust
+                replies together.
+              </div>
+            </div>
+            <div class="how-step">
+              <div class="step-index">Step 3</div>
+              <div class="step-title">Launch &amp; optimise</div>
+              <div class="step-text">
+                Once you’re happy, CloseMate AI handles the bulk of chats. We track
+                performance and suggest optimisations to increase conversions over time.
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      <!-- PRICING -->
+      <section id="pricing" class="pricing-section">
+        <div class="section-inner">
+          <div class="label">Pricing</div>
+          <h2 class="section-title">Simple plans that scale with your WhatsApp volume.</h2>
+          <p class="section-sub">
+            Transparent pricing in AED, designed for Dubai service businesses. All plans
+            include setup support, AI training and basic weekly check-ins.
+          </p>
 
           <div class="pricing-grid">
-            <div class="card">
-              <h3>Starter</h3>
-              <div class="price">
-                $299<span>/month</span>
+            <div class="pricing-card">
+              <div class="pricing-name">Starter</div>
+              <div class="pricing-desc">For small teams testing AI on WhatsApp.</div>
+              <div class="pricing-price">
+                899 <span>AED / month</span>
               </div>
-              <ul class="price-list">
-                <li>
-                  <span class="check">✔</span>
-                  <span>1 lead channel (WhatsApp or website)</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Up to 300 new leads / month</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Basic qualification & booking flows</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Email summary after each booking</span>
-                </li>
+              <ul class="pricing-list">
+                <li>Up to ~300 WhatsApp conversations / month</li>
+                <li>AI replies 24/7 in English</li>
+                <li>FAQ, pricing &amp; basic booking flows</li>
+                <li>1 WhatsApp Business number</li>
+                <li>Email support</li>
               </ul>
-              <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                Start with Starter
+              <button class="btn btn-ghost" style="margin-top:8px;">Start with Starter</button>
+            </div>
+
+            <div class="pricing-card highlight">
+              <div class="pricing-badge">Most popular</div>
+              <div class="pricing-name">Growth</div>
+              <div class="pricing-desc">For clinics, salons &amp; agencies that live in WhatsApp.</div>
+              <div class="pricing-price">
+                1,499 <span>AED / month</span>
+              </div>
+              <ul class="pricing-list">
+                <li>Up to ~900 WhatsApp conversations / month</li>
+                <li>Advanced qualification &amp; upsell flows</li>
+                <li>Automatic follow-up sequences</li>
+                <li>Multi-language support (e.g. EN + AR)*</li>
+                <li>Basic voice / call-ready flows</li>
+                <li>Priority support &amp; monthly optimisation call</li>
+              </ul>
+              <button class="btn btn-primary" style="margin-top:8px;width:100%;">
+                Talk to us about Growth
               </button>
             </div>
-            <div class="card" style="border-width: 2px; border-color: #0f172a;">
-              <h3>
-                Pro
-                <span class="tag">Most popular</span>
-              </h3>
-              <div class="price">
-                $499<span>/month</span>
+
+            <div class="pricing-card">
+              <div class="pricing-name">Scale</div>
+              <div class="pricing-desc">For high-volume brands &amp; multi-location groups.</div>
+              <div class="pricing-price">
+                2,499 <span>AED / month</span>
               </div>
-              <ul class="price-list">
-                <li>
-                  <span class="check">✔</span>
-                  <span>2 lead channels (e.g. WhatsApp + website)</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Up to 800 new leads / month</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Advanced qualification & objection handling</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Weekly performance report</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Priority support on WhatsApp</span>
-                </li>
+              <ul class="pricing-list">
+                <li>Up to ~2,500 WhatsApp conversations / month</li>
+                <li>Custom sales flows &amp; integrations</li>
+                <li>Dedicated success manager</li>
+                <li>Deeper analytics &amp; reporting</li>
+                <li>Custom AI voice / outbound experiments</li>
               </ul>
-              <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                Get Pro pilot
-              </button>
+              <button class="btn btn-ghost" style="margin-top:8px;">Discuss Scale plan</button>
             </div>
-            <div class="card">
-              <h3>Scale</h3>
-              <div class="price">
-                Custom<span>/month</span>
+          </div>
+
+          <div class="pricing-setup">
+            <strong>One-time setup &amp; training fee:</strong> typically 1,500–3,000 AED
+            depending on complexity (flows, languages, integrations).
+          </div>
+          <div class="pricing-bottom-note">
+            *Multi-language available on Growth &amp; Scale plans, depending on your scripts and volume.
+            All prices exclude any telecom/provider fees for WhatsApp Business API.
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY DUBAI -->
+      <section id="why-dubai">
+        <div class="section-inner">
+          <div class="label">Why Dubai</div>
+          <h2 class="section-title">Made for WhatsApp-first service businesses in Dubai.</h2>
+          <p class="section-sub">
+            Dubai runs on WhatsApp: clients message about prices, availability and bookings
+            all day long. CloseMate AI is built around this reality — not generic chatbots.
+          </p>
+
+          <div class="why-grid">
+            <div class="why-points">
+              <div class="why-item">
+                <div class="why-dot"></div>
+                <div>
+                  <strong>WhatsApp as the main channel.</strong><br/>
+                  Most service businesses in Dubai rely on WhatsApp more than email or
+                  call centres. That’s exactly where CloseMate AI lives.
+                </div>
               </div>
-              <ul class="price-list">
-                <li>
-                  <span class="check">✔</span>
-                  <span>Multiple channels & locations</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Custom integrations (CRM, phone, booking)</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>Dedicated account manager</span>
-                </li>
-                <li>
-                  <span class="check">✔</span>
-                  <span>On-site or remote training for your team</span>
-                </li>
-              </ul>
-              <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });">
-                Talk to sales
-              </button>
+              <div class="why-item">
+                <div class="why-dot"></div>
+                <div>
+                  <strong>High client expectations.</strong><br/>
+                  People expect fast, clear answers — especially in beauty, health,
+                  fitness, home services and real estate. Slow replies = lost revenue.
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-dot"></div>
+                <div>
+                  <strong>Hiring is expensive.</strong><br/>
+                  Extra staff just for WhatsApp replies and follow-ups is costly.
+                  An AI assistant is a fixed, predictable investment.
+                </div>
+              </div>
+              <div class="why-item">
+                <div class="why-dot"></div>
+                <div>
+                  <strong>Multilingual audience.</strong><br/>
+                  Dubai is international. CloseMate AI can be trained on English
+                  first, and later extended with Arabic or other languages.
+                </div>
+              </div>
+            </div>
+
+            <div class="why-card">
+              <div class="why-stat">30–60%</div>
+              <div style="margin-bottom:6px;">
+                of inbound WhatsApp leads are often lost when staff is busy, offline
+                or answering too late.
+              </div>
+              <div>
+                CloseMate AI helps capture this hidden revenue by replying instantly,
+                qualifying and nudging clients towards a booking — in a way that feels
+                natural, not robotic.
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- FAQ -->
+      <!-- FAQ + CONTACT -->
       <section id="faq">
-        <div class="container">
-          <div class="section-header">
-            <div class="section-kicker">FAQ</div>
-            <h2 class="section-title">Questions owners usually ask.</h2>
-            <p class="section-subtitle">
-              If you still have more questions, send us a message – the AI
-              closer can answer those too.
-            </p>
-          </div>
+        <div class="section-inner">
+          <div class="label">FAQ</div>
+          <h2 class="section-title">Questions you might have.</h2>
+          <p class="section-sub">
+            Here’s what most owners and managers ask before they get started with CloseMate AI.
+            If something is missing — just drop us a message.
+          </p>
 
-          <div class="two-cols">
-            <div>
-              <div class="faq-item">
-                <div class="faq-q">Is this replacing my sales team?</div>
-                <div class="faq-a">
-                  Not necessarily. Many clients use CloseMate AI to handle the
-                  first contact, basic qualification and booking, and then a
-                  human takes over. You can decide where AI stops.
-                </div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">Which channels do you support?</div>
-                <div class="faq-a">
-                  We start with WhatsApp Business and website forms / chat. We
-                  can discuss Instagram DM, Facebook and other channels for
-                  Pro/Scale plans.
-                </div>
-              </div>
-              <div class="faq-item">
-                <div class="faq-q">
-                  How long does it take to go live?
-                </div>
-                <div class="faq-a">
-                  Usually 1–2 days. We just need your service list, prices,
-                  availability and how you prefer to talk to clients.
-                </div>
+          <div class="faq-grid">
+            <div class="faq-item">
+              <div class="faq-q">Is this a chatbot or real AI?</div>
+              <div class="faq-a">
+                CloseMate AI uses large language models (LLMs) that understand context
+                and write natural messages. We add clear guardrails and scripts so it
+                stays on-brand and on-topic for your business.
               </div>
             </div>
-            <div>
-              <div class="faq-item">
-                <div class="faq-q">Can I control what the AI says?</div>
-                <div class="faq-a">
-                  Yes. We define clear rules, tone of voice and limits. For
-                  sensitive cases, AI can ask a human to take over instead of
-                  answering.
-                </div>
+            <div class="faq-item">
+              <div class="faq-q">Can my team still jump into conversations?</div>
+              <div class="faq-a">
+                Yes. Your staff can take over any conversation at any time. Think of
+                CloseMate as your first-line sales assistant that handles the routine,
+                while humans focus on complex cases and VIP clients.
               </div>
-              <div class="faq-item">
-                <div class="faq-q">Is my data safe?</div>
-                <div class="faq-a">
-                  We do not sell or share your leads. Data is encrypted in
-                  transit and at rest. On Scale plans we can sign a
-                  confidentiality agreement.
-                </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Do you integrate with our booking or CRM tools?</div>
+              <div class="faq-a">
+                We start simple: WhatsApp + AI + light tracking. For Growth and Scale
+                plans we can explore connecting to your existing booking tools or CRM,
+                depending on your stack and budget.
               </div>
-              <div class="faq-item">
-                <div class="faq-q">
-                  What if the AI makes a mistake with a client?
-                </div>
-                <div class="faq-a">
-                  We start with a supervised pilot, review the conversations
-                  together and adjust. You can always stop or change the
-                  responses.
-                </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">How long does setup usually take?</div>
+              <div class="faq-a">
+                For a typical clinic or salon in Dubai, we can go from zero to live
+                pilot in 5–10 days, depending on how fast we receive your prices,
+                scripts and approvals.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">Is it safe for our clients and data?</div>
+              <div class="faq-a">
+                We follow best practices around data minimisation and API usage.
+                We don’t sell your data, and can adapt to your internal compliance
+                requirements where needed.
+              </div>
+            </div>
+            <div class="faq-item">
+              <div class="faq-q">What if we’re not happy with the results?</div>
+              <div class="faq-a">
+                We usually start with a 1–2 month pilot. If CloseMate AI doesn’t make
+                sense for your business after that, you can simply cancel — no long-term
+                contract required.
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <!-- Contact -->
-      <section id="contact">
-        <div class="container">
-          <div class="contact-card">
+          <div class="contact-strip" id="contact">
             <div>
-              <div class="contact-title">Get your first AI sales closer.</div>
-              <div class="contact-subtitle">
-                Tell us a bit about your business and we’ll set up a free
-                7-day pilot. If it doesn’t bring you extra bookings, you pay
-                nothing.
-              </div>
-              <p class="contact-note">
-                Typical results: 2–3× faster replies and 20–40% more leads
-                moved to calls or appointments.
-              </p>
+              <strong>Ready to see CloseMate AI on your WhatsApp?</strong><br/>
+              Send us your WhatsApp number or Instagram handle and we’ll reply with a short personalised demo.
             </div>
-            <div>
-              <form name="contact" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="contact" />
-                <div class="form-grid">
-                  <div class="form-field">
-                    <label for="name">Name</label>
-                    <input id="name" name="name" type="text" placeholder="Jane Doe" />
-                  </div>
-                  <div class="form-field">
-                    <label for="email">Work email</label>
-                    <input
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="you@company.com"
-                    />
-                  </div>
-                </div>
-                <div class="form-grid">
-                  <div class="form-field">
-                    <label for="business">Business name</label>
-                    <input
-                      id="business"
-                      name="business"
-                      type="text"
-                      placeholder="Bright Smiles Clinic"
-                    />
-                  </div>
-                  <div class="form-field">
-                    <label for="website">Website / Instagram</label>
-                    <input
-                      id="website"
-                      name="website"
-                      type="text"
-                      placeholder="www.yoursite.com / @yourpage"
-                    />
-                  </div>
-                </div>
-                <div class="form-grid">
-                  <div class="form-field">
-                    <label for="whatsapp">WhatsApp number</label>
-                    <input
-                      id="whatsapp"
-                      name="whatsapp"
-                      type="text"
-                      placeholder="+971 55 000 0000"
-                    />
-                  </div>
-                  <div class="form-field">
-                    <label for="leads">Leads per month (roughly)</label>
-                    <select id="leads" name="leads">
-                      <option value="">Select</option>
-                      <option>&lt; 50</option>
-                      <option>50–150</option>
-                      <option>150–400</option>
-                      <option>&gt; 400</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-field">
-                  <label for="message">Anything we should know?</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Main service, locations, current problems with leads..."
-                  ></textarea>
-                </div>
-                <div style="margin-top: 10px; display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-                  <button type="submit" class="btn-primary">
-                    Request 7-day pilot
-                  </button>
-                  <span style="font-size: 11px; opacity: 0.8;">
-                    We’ll get back within 24 hours.
-                  </span>
-                </div>
-              </form>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+              <!-- TODO: замени email и WhatsApp под себя -->
+              <a href="mailto:hello@closemate.ai" class="btn btn-ghost">Email us</a>
+              <a href="https://wa.me/0000000000000" class="btn btn-primary">
+                Message on WhatsApp
+              </a>
             </div>
           </div>
         </div>
@@ -1113,23 +1123,16 @@
     </main>
 
     <footer>
-      <div class="container footer-inner">
-        <div>© <span id="year"></span> CloseMate AI. All rights reserved.</div>
-        <div class="footer-links">
-          <span>Contact: hello@closemate.ai</span>
-          <span>•</span>
-          <a href="#pricing">Pricing</a>
-          <span>•</span>
-          <a href="#faq">FAQ</a>
-        </div>
+      <div>© <span id="year"></span> CloseMate AI. All rights reserved.</div>
+      <div>
+        Built for modern service businesses in Dubai.
       </div>
     </footer>
   </div>
 
   <script>
-    // Set year in footer
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Simple year auto-update
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
