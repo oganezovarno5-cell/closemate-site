@@ -23,9 +23,7 @@
       --max-width: 980px;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     html, body {
       margin: 0;
@@ -469,7 +467,7 @@
     }
 
     .faq-item.open .faq-answer {
-      max-height: 120px; /* достаточно для короткого ответа */
+      max-height: 140px;
       opacity: 1;
       padding-top: 4px;
       padding-bottom: 10px;
@@ -572,9 +570,7 @@
     /* RESPONSIVE */
 
     @media (max-width: 900px) {
-      nav {
-        display: none;
-      }
+      nav { display: none; }
       .hero {
         grid-template-columns: minmax(0, 1fr);
       }
@@ -592,9 +588,7 @@
     }
 
     @media (max-width: 600px) {
-      .page {
-        padding-inline: 14px;
-      }
+      .page { padding-inline: 14px; }
       header {
         border-radius: 16px;
         padding-inline: 14px;
@@ -647,7 +641,7 @@
             </button>
           </div>
           <div class="hero-note">
-            Start with a short pilot. No long contracts.
+            Start with a 5-day pilot. No long contracts.
           </div>
           <div class="hero-metrics">
             <div class="metric-pill">
@@ -809,8 +803,8 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                For a typical service business, we can go from zero to a live pilot in about
-                1–2 weeks, depending on how fast we get your pricing and examples of chats.
+                For a typical service business, we can go from zero to a live 5-day pilot
+                in about a week, depending on how fast we get your pricing and example chats.
               </div>
             </div>
 
@@ -820,8 +814,8 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                Yes. We usually start with a 1–2 month pilot. If CloseMate AI isn’t a fit,
-                you can cancel — no long-term lock-in.
+                Yes. We start with a 5-day pilot. If CloseMate AI isn’t a fit,
+                you simply don’t continue — no long-term lock-in.
               </div>
             </div>
           </div>
@@ -874,15 +868,14 @@
             <div class="contact-text">
               <div>
                 Prefer to reach out yourself?<br/>
-                <!-- TODO: замени контакты на свои -->
-                <a href="mailto:hello@closemate.ai" class="link-muted">hello@closemate.ai</a><br/>
-                <a href="https://wa.me/0000000000000" class="link-muted" target="_blank">Message on WhatsApp</a>
+                <!-- TODO: замени email на свой -->
+                <a href="mailto:hello@closemate.ai" class="link-muted">hello@closemate.ai</a>
               </div>
               <div>
                 Typical process:<br/>
                 – 15–20 min intro call<br/>
                 – short demo on your use case<br/>
-                – 1–2 month pilot if it makes sense
+                – 5-day pilot on your real WhatsApp traffic
               </div>
             </div>
           </div>
@@ -910,4 +903,3 @@
   </script>
 </body>
 </html>
-
