@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CloseMate AI – WhatsApp Sales Assistant</title>
+  <title>Aurelian Systems – WhatsApp Sales Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="AI WhatsApp sales assistant for modern service businesses." />
+  <meta name="description" content="Aurelian Systems – AI WhatsApp sales assistant for modern service businesses." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -23,7 +23,9 @@
       --max-width: 980px;
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     html, body {
       margin: 0;
@@ -505,7 +507,7 @@
       color: var(--text-main);
     }
 
-    input, select, textarea {
+    input, textarea {
       width: 100%;
       padding: 8px 10px;
       border-radius: 12px;
@@ -517,7 +519,7 @@
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
-    input:focus, select:focus, textarea:focus {
+    input:focus, textarea:focus {
       border-color: #111111;
       box-shadow: 0 0 0 1px rgba(0,0,0,0.12);
     }
@@ -540,16 +542,6 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-    }
-
-    a.link-muted {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-
-    a.link-muted:hover {
-      text-decoration: underline;
-      color: var(--text-main);
     }
 
     /* FOOTER */
@@ -603,9 +595,9 @@
   <div class="page">
     <header>
       <div class="logo">
-        <div class="logo-mark">C</div>
+        <div class="logo-mark">A</div>
         <div>
-          <div class="logo-text-main">CloseMate AI</div>
+          <div class="logo-text-main">Aurelian Systems</div>
           <div class="logo-text-sub">WhatsApp sales assistant</div>
         </div>
       </div>
@@ -629,14 +621,14 @@
             Turn your WhatsApp into a <span class="accent">sales assistant</span>.
           </h1>
           <p class="hero-sub">
-            CloseMate AI replies in seconds, qualifies leads and moves them to a booking —
+            Aurelian Systems replies in seconds, qualifies leads and moves them to a booking —
             without another person glued to the phone.
           </p>
           <div class="hero-cta-row">
             <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
               Book a discovery call
             </button>
-          <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+            <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
               View pricing
             </button>
           </div>
@@ -684,7 +676,7 @@
       <section id="features">
         <div class="section-inner">
           <div class="label">Product</div>
-          <h2 class="section-title">What CloseMate AI does.</h2>
+          <h2 class="section-title">What Aurelian Systems does.</h2>
           <p class="section-sub">
             A focused AI agent that lives inside your WhatsApp Business and behaves
             like a well-trained sales teammate.
@@ -781,7 +773,7 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                CloseMate AI uses modern language models trained on your services and tone,
+                Aurelian Systems uses modern language models trained on your services and tone,
                 so it understands context and writes natural replies — not just fixed buttons.
               </div>
             </div>
@@ -792,7 +784,7 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                Yes. Your team can jump into any conversation at any time. Think of CloseMate
+                Yes. Your team can jump into any conversation at any time. Think of Aurelian Systems
                 as a first-line assistant that handles the routine and keeps things moving.
               </div>
             </div>
@@ -814,7 +806,7 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                Yes. We start with a 5-day pilot. If CloseMate AI isn’t a fit,
+                Yes. We start with a 5-day pilot. If Aurelian Systems isn’t a fit,
                 you simply don’t continue — no long-term lock-in.
               </div>
             </div>
@@ -829,12 +821,17 @@
           <h2 class="section-title">Tell us about your business.</h2>
           <p class="section-sub">
             Leave your details and we’ll schedule a short call to walk through a demo
-            and see if CloseMate AI fits you.
+            and see if Aurelian Systems fits you.
           </p>
 
           <div class="contact-grid">
             <div>
-              <form name="contact" method="POST" data-netlify="true">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                action="/thank-you.html"
+              >
                 <input type="hidden" name="form-name" value="contact" />
 
                 <div>
@@ -861,21 +858,20 @@
                   <button type="submit" class="btn btn-primary">Request a call</button>
                 </div>
                 <div class="form-full form-footnote">
-                  We’ll only use your details to contact you about CloseMate AI.
+                  We’ll only use your details to contact you about Aurelian Systems.
                 </div>
               </form>
             </div>
 
             <div class="contact-text">
               <div>
-                Prefer to reach out yourself?<br/>
-                <a href="mailto:hello@closemate.ai" class="link-muted">hello@closemate.ai</a>
+                We typically respond within one business day.
               </div>
               <div>
-                Typical process:<br/>
-                – 15–20 min intro call<br/>
-                – short demo on your use case<br/>
-                – 5-day pilot on your real WhatsApp traffic
+                On the call, we’ll:<br/>
+                – look at your current WhatsApp flow<br/>
+                – show how the assistant would handle it<br/>
+                – outline a simple 5-day pilot on real traffic
               </div>
             </div>
           </div>
@@ -884,7 +880,7 @@
     </main>
 
     <footer>
-      <div>© <span id="year"></span> CloseMate AI.</div>
+      <div>© <span id="year"></span> Aurelian Systems.</div>
       <div>Built for teams that sell through WhatsApp.</div>
     </footer>
   </div>
