@@ -636,7 +636,7 @@
             <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
               Book a discovery call
             </button>
-            <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
+          <button class="btn btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">
               View pricing
             </button>
           </div>
@@ -834,8 +834,9 @@
 
           <div class="contact-grid">
             <div>
-              <!-- TODO: поменяй action на свой endpoint (Formspree, backend и т.п.) -->
-              <form action="https://example.com/endpoint" method="POST">
+              <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
+
                 <div>
                   <label for="name">Your name</label>
                   <input type="text" id="name" name="name" required placeholder="John Doe" />
@@ -868,7 +869,6 @@
             <div class="contact-text">
               <div>
                 Prefer to reach out yourself?<br/>
-                <!-- TODO: замени email на свой -->
                 <a href="mailto:hello@closemate.ai" class="link-muted">hello@closemate.ai</a>
               </div>
               <div>
@@ -903,3 +903,4 @@
   </script>
 </body>
 </html>
+
