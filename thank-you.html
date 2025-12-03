@@ -4,18 +4,19 @@
   <meta charset="UTF-8" />
   <title>Thank you – Aurelian Systems</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Thank you for your request – Aurelian Systems." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f5f7;
-      --bg-soft: #ffffff;
-      --text-main: #111111;
-      --text-muted: #6e6e73;
-      --border-subtle: #e5e5ea;
+      --bg: radial-gradient(circle at top, #191825 0, #080812 40%, #050509 100%);
+      --text-main: #f7f7fb;
+      --text-muted: #9b9bb0;
+      --border-subtle: rgba(255,255,255,0.16);
       --radius-xl: 24px;
-      --shadow-soft: 0 24px 60px rgba(0,0,0,0.08);
+      --radius-pill: 999px;
+      --shadow-soft: 0 28px 80px rgba(0,0,0,0.8);
     }
 
     * { box-sizing: border-box; }
@@ -23,126 +24,263 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, sans-serif;
-      background: radial-gradient(circle at top, #ffffff 0, #f5f5f7 55%, #eaeaee 100%);
+      background: var(--bg);
       color: var(--text-main);
     }
 
     body {
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background logo */
+    .bg-logo-wrapper {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .bg-logo-circle {
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle at 35% 25%, #f5e6b8 0, #e4c982 14%, #a28b4f 26%, #27263c 55%, #11111e 100%);
+      box-shadow:
+        0 18px 50px rgba(0,0,0,0.85),
+        0 0 0 1px rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.3;
+      transform: translate3d(0, -10px, 0) scale(1.05);
+    }
+
+    .bg-logo-circle::before {
+      content: "A";
+      font-size: 120px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: rgba(8,8,15,0.96);
+      text-shadow:
+        0 10px 24px rgba(0,0,0,0.85),
+        0 0 26px rgba(244,224,157,0.85);
+    }
+
+    @media (max-width: 768px) {
+      .bg-logo-circle {
+        width: 300px;
+        height: 300px;
+        opacity: 0.26;
+      }
+      .bg-logo-circle::before {
+        font-size: 82px;
+      }
+    }
+
+    .shell {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 520px;
       padding: 24px;
     }
 
     .card {
-      max-width: 460px;
-      width: 100%;
-      background: var(--bg-soft);
       border-radius: var(--radius-xl);
-      padding: 28px 26px 24px;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(8,8,16,0.96));
       border: 1px solid var(--border-subtle);
+      padding: 26px 24px 24px;
       box-shadow: var(--shadow-soft);
-      text-align: left;
+      backdrop-filter: blur(22px);
     }
 
-    .badge {
+    .logo-mini {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      padding: 4px 10px;
+      gap: 10px;
+      padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid var(--border-subtle);
+      background: rgba(5,5,10,0.9);
+      border: 1px solid rgba(255,255,255,0.16);
+      margin-bottom: 18px;
+      font-size: 11px;
       color: var(--text-muted);
-      margin-bottom: 10px;
     }
 
-    .logo-dot {
-      width: 16px;
-      height: 16px;
-      border-radius: 6px;
-      background: #111111;
+    .logo-mark {
+      width: 26px;
+      height: 26px;
+      border-radius: 9px;
+      background: radial-gradient(circle at 30% 20%, #fdfdfd 0, #f4f4f8 35%, #1a1b27 100%);
+      color: #0b0b12;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 13px;
+      box-shadow:
+        0 8px 20px rgba(0,0,0,0.55),
+        0 0 0 1px rgba(255,255,255,0.16);
+    }
+
+    .logo-text-main {
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 0 0 8px;
-      font-size: 24px;
+      font-size: 26px;
       letter-spacing: -0.03em;
     }
 
     .subtitle {
       font-size: 14px;
       color: var(--text-muted);
+      line-height: 1.7;
       margin-bottom: 18px;
-      line-height: 1.6;
     }
 
-    .detail {
-      font-size: 12px;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-
-    .btn-primary {
+    .pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 9px 16px;
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(5,5,10,0.9);
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 999px;
-      border: none;
-      background: #111111;
-      color: #f5f5f7;
+      background: #13b169;
+    }
+
+    .list {
       font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin: 0 0 22px;
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .list li::before {
+      content: "• ";
+      color: var(--text-main);
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      border: none;
       cursor: pointer;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.22);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
       text-decoration: none;
     }
 
-    .btn-primary:hover {
-      box-shadow: 0 18px 50px rgba(0,0,0,0.28);
-      transform: translateY(-1px);
+    .btn-primary {
+      background: #f7f7fb;
+      color: #050509;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.55);
     }
 
-    .hint {
-      margin-top: 12px;
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 18px 52px rgba(0,0,0,0.8);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .footnote {
+      margin-top: 18px;
       font-size: 11px;
       color: var(--text-muted);
     }
 
-    @media (max-width: 520px) {
-      .card {
-        padding: 22px 18px 20px;
-      }
-      h1 {
-        font-size: 22px;
-      }
+    @media (max-width: 600px) {
+      .shell { padding: 18px; }
+      .card { padding: 22px 18px 20px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="badge">
-      <span class="logo-dot"></span>
-      <span>Aurelian Systems</span>
-    </div>
-    <h1>Thank you for your request.</h1>
-    <p class="subtitle">
-      We’ve received your details. A member of the Aurelian Systems team will get back to you shortly.
-    </p>
-    <p class="detail">
-      If you submitted this outside business hours, expect a reply on the next working day. In the meantime, you can return to the homepage and explore the product again.
-    </p>
+  <div class="bg-logo-wrapper">
+    <div class="bg-logo-circle"></div>
+  </div>
 
-    <a href="/" class="btn-primary">
-      Back to homepage
-    </a>
+  <div class="shell">
+    <div class="card">
+      <div class="logo-mini">
+        <div class="logo-mark">A</div>
+        <div class="logo-text-main">Aurelian Systems</div>
+      </div>
 
-    <div class="hint">
-      If something was incorrect, you can send a new request from the contact form.
+      <h1>Thank you for your request.</h1>
+      <p class="subtitle">
+        We’ve received your details and will get back to you shortly to schedule
+        a discovery call and walk you through a live demo.
+      </p>
+
+      <div class="pill">
+        <span class="pill-dot"></span>
+        <span>Typical response time — within 1 business day.</span>
+      </div>
+
+      <ul class="list">
+        <li>You can close this tab now — your submission is saved.</li>
+        <li>We’ll reach out via email or WhatsApp using the contacts you provided.</li>
+        <li>On the call, we’ll review your current WhatsApp flow and outline a 5-day pilot.</li>
+      </ul>
+
+      <div class="btn-row">
+        <a href="/" class="btn btn-primary">Back to homepage</a>
+        <a href="mailto:hello@aurelian.systems" class="btn btn-ghost">
+          Contact us directly
+        </a>
+      </div>
+
+      <div class="footnote">
+        If you sent the form by mistake, simply ignore this message — no changes
+        were made to your WhatsApp setup yet.
+      </div>
     </div>
   </div>
 </body>
 </html>
+
