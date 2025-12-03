@@ -41,54 +41,61 @@
       overflow-x: hidden;
     }
 
-    /* GLOBAL 3D LOGO BACKGROUND */
+    /* GLOBAL 3D LOGO BACKGROUND (обновлённый) */
 
     .bg-logo-wrapper {
       position: fixed;
       inset: 0;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      align-items: flex-start;
+      justify-content: flex-end;
+      padding-top: 80px;
+      padding-right: 8%;
       pointer-events: none;
       z-index: 0;
     }
 
     .bg-logo-circle {
-      width: 520px;
-      height: 520px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       background:
-        radial-gradient(circle at 30% 20%, #ffffff 0, #f5f5ff 26%, #c5c7e2 52%, #181927 100%);
+        radial-gradient(circle at 35% 25%, #f5e6b8 0, #e4c982 14%, #a28b4f 26%, #27263c 55%, #11111e 100%);
       box-shadow:
-        0 22px 60px rgba(0,0,0,0.85),
-        0 0 0 1px rgba(255,255,255,0.2);
+        0 18px 50px rgba(0,0,0,0.85),
+        0 0 0 1px rgba(255,255,255,0.08);
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.7;
-      transform: translate3d(0, -40px, 0) scale(1);
+      opacity: 0.35;
+      transform: translate3d(0, -20px, 0) scale(1);
       transition: transform 0.18s ease-out;
     }
 
     .bg-logo-circle::before {
       content: "A";
-      font-size: 140px;
+      font-size: 110px;
       font-weight: 700;
       letter-spacing: 0.18em;
-      color: rgba(5,5,10,0.96);
+      color: rgba(8,8,15,0.96);
       text-shadow:
-        0 16px 32px rgba(0,0,0,0.85),
-        0 0 45px rgba(255,255,255,0.85);
+        0 10px 24px rgba(0,0,0,0.85),
+        0 0 26px rgba(244,224,157,0.85);
     }
 
     @media (max-width: 768px) {
+      .bg-logo-wrapper {
+        padding-top: 120px;
+        padding-right: 0;
+        justify-content: center;
+      }
       .bg-logo-circle {
-        width: 360px;
-        height: 360px;
-        opacity: 0.55;
+        width: 300px;
+        height: 300px;
+        opacity: 0.28;
       }
       .bg-logo-circle::before {
-        font-size: 96px;
+        font-size: 82px;
       }
     }
 
@@ -333,7 +340,7 @@
       text-transform: uppercase;
     }
 
-    /* HERO VISUAL – ЧИСТАЯ КАРТОЧКА НА ФОНЕ С ЛОГО */
+    /* HERO VISUAL */
 
     .hero-visual {
       border-radius: var(--radius-xl);
@@ -1018,13 +1025,13 @@
       });
     });
 
-    // Анимация 3D-логотипа при скролле (увеличивается и чуть смещается вниз)
+    // Анимация 3D-логотипа при скролле (чуть увеличивается и опускается)
     const bgCircle = document.querySelector('.bg-logo-circle');
     window.addEventListener('scroll', () => {
       const maxScroll = 600;
       const s = Math.min(window.scrollY / maxScroll, 1);
-      const scale = 1 + s * 0.3;        // до ~1.3
-      const translateY = -40 + s * 40;  // с -40px до 0
+      const scale = 1 + s * 0.22;        // до ~1.22
+      const translateY = -20 + s * 25;   // с -20px до +5px
       bgCircle.style.transform =
         `translate3d(0, ${translateY}px, 0) scale(${scale})`;
     });
