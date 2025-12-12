@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Aurelian Systems – WhatsApp Sales Assistant</title>
+  <title>Aurelian Systems – AI Messaging & Sales Assistant</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Aurelian Systems – AI WhatsApp sales assistant for modern service businesses." />
+  <meta name="description" content="Aurelian Systems – AI assistant for WhatsApp, Instagram and Facebook. Replies instantly, qualifies leads and books appointments." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -41,8 +41,7 @@
       overflow-x: hidden;
     }
 
-    /* GLOBAL 3D LOGO BACKGROUND (обновлённый) */
-
+    /* Background logo */
     .bg-logo-wrapper {
       position: fixed;
       inset: 0;
@@ -67,7 +66,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.35;
+      opacity: 0.30;
       transform: translate3d(0, -20px, 0) scale(1);
       transition: transform 0.18s ease-out;
     }
@@ -92,7 +91,7 @@
       .bg-logo-circle {
         width: 300px;
         height: 300px;
-        opacity: 0.28;
+        opacity: 0.24;
       }
       .bg-logo-circle::before {
         font-size: 82px;
@@ -106,8 +105,6 @@
       position: relative;
       z-index: 1;
     }
-
-    /* HEADER */
 
     header {
       display: flex;
@@ -215,8 +212,6 @@
       background: rgba(255,255,255,0.06);
     }
 
-    /* MAIN */
-
     main {
       margin-top: 40px;
       display: flex;
@@ -256,12 +251,11 @@
     .section-sub {
       font-size: 14px;
       color: var(--text-muted);
-      max-width: 420px;
+      max-width: 520px;
       line-height: 1.6;
     }
 
     /* HERO */
-
     .hero {
       display: grid;
       grid-template-columns: minmax(0, 1.25fr) minmax(0, 1.1fr);
@@ -282,14 +276,12 @@
       margin: 0 0 10px;
     }
 
-    h1 span.accent {
-      color: var(--accent);
-    }
+    h1 span.accent { color: var(--accent); }
 
     .hero-sub {
       font-size: 14px;
       color: var(--text-muted);
-      max-width: 420px;
+      max-width: 520px;
       line-height: 1.7;
       margin-bottom: 20px;
     }
@@ -340,8 +332,23 @@
       text-transform: uppercase;
     }
 
-    /* HERO VISUAL */
+    /* Mini channel pills */
+    .channels {
+      margin-top: 10px;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      font-size: 12px;
+    }
+    .channel-pill {
+      padding: 6px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(235,235,245,0.9);
+    }
 
+    /* Hero visual */
     .hero-visual {
       border-radius: var(--radius-xl);
       padding: 18px;
@@ -359,7 +366,7 @@
       background: rgba(5, 5, 10, 0.98);
       border: 1px solid rgba(255,255,255,0.2);
       padding: 14px 13px 12px;
-      max-width: 360px;
+      max-width: 380px;
       font-size: 12px;
       box-shadow: 0 26px 60px rgba(0,0,0,0.9);
     }
@@ -426,8 +433,7 @@
       background: #13b169;
     }
 
-    /* FEATURES */
-
+    /* Features */
     .features-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -455,8 +461,7 @@
       line-height: 1.6;
     }
 
-    /* PRICING */
-
+    /* Pricing */
     .pricing-row {
       display: grid;
       grid-template-columns: repeat(3, minmax(0,1fr));
@@ -482,10 +487,7 @@
       box-shadow: 0 24px 60px rgba(0,0,0,0.85);
     }
 
-    .pricing-name {
-      font-weight: 600;
-      font-size: 14px;
-    }
+    .pricing-name { font-weight: 600; font-size: 14px; }
 
     .pricing-price {
       font-size: 22px;
@@ -495,15 +497,9 @@
       gap: 4px;
     }
 
-    .pricing-price span {
-      font-size: 11px;
-      color: var(--text-muted);
-    }
+    .pricing-price span { font-size: 11px; color: var(--text-muted); }
 
-    .pricing-desc {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .pricing-desc { font-size: 12px; color: var(--text-muted); }
 
     .pricing-list {
       list-style: none;
@@ -522,7 +518,6 @@
     }
 
     /* FAQ */
-
     .faq-items {
       margin-top: 20px;
       display: flex;
@@ -547,10 +542,7 @@
       font-size: 13px;
     }
 
-    .faq-question-text {
-      font-weight: 500;
-      color: var(--text-main);
-    }
+    .faq-question-text { font-weight: 500; color: var(--text-main); }
 
     .faq-icon {
       width: 18px;
@@ -578,7 +570,7 @@
     }
 
     .faq-item.open .faq-answer {
-      max-height: 140px;
+      max-height: 160px;
       opacity: 1;
       padding-top: 4px;
       padding-bottom: 10px;
@@ -589,8 +581,7 @@
       background: rgba(255,255,255,0.08);
     }
 
-    /* CONTACT */
-
+    /* Contact */
     .contact-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.9fr);
@@ -605,9 +596,7 @@
       font-size: 13px;
     }
 
-    .form-full {
-      grid-column: 1 / -1;
-    }
+    .form-full { grid-column: 1 / -1; }
 
     label {
       display: block;
@@ -629,8 +618,7 @@
       transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
-    input::placeholder,
-    textarea::placeholder {
+    input::placeholder, textarea::placeholder {
       color: rgba(155,155,180,0.7);
     }
 
@@ -640,10 +628,7 @@
       background: rgba(3,3,8,0.98);
     }
 
-    textarea {
-      min-height: 80px;
-      resize: vertical;
-    }
+    textarea { min-height: 80px; resize: vertical; }
 
     .form-footnote {
       font-size: 11px;
@@ -660,8 +645,6 @@
       gap: 12px;
     }
 
-    /* FOOTER */
-
     footer {
       max-width: var(--max-width);
       margin: 40px auto 0;
@@ -675,40 +658,22 @@
       gap: 8px;
     }
 
-    /* RESPONSIVE */
-
     @media (max-width: 900px) {
       nav { display: none; }
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      .hero-visual {
-        margin-top: 22px;
-      }
-      .features-row,
-      .pricing-row,
-      .contact-grid {
-        grid-template-columns: minmax(0,1fr);
-      }
-      .section-inner {
-        padding: 24px 18px 26px;
-      }
+      .hero { grid-template-columns: minmax(0, 1fr); }
+      .hero-visual { margin-top: 22px; }
+      .features-row, .pricing-row, .contact-grid { grid-template-columns: minmax(0,1fr); }
+      .section-inner { padding: 24px 18px 26px; }
     }
 
     @media (max-width: 600px) {
       .page { padding-inline: 14px; }
-      header {
-        border-radius: 16px;
-        padding-inline: 14px;
-      }
-      form {
-        grid-template-columns: minmax(0,1fr);
-      }
+      header { border-radius: 16px; padding-inline: 14px; }
+      form { grid-template-columns: minmax(0,1fr); }
     }
   </style>
 </head>
 <body>
-  <!-- Большой 3D-логотип на фоне -->
   <div class="bg-logo-wrapper">
     <div class="bg-logo-circle"></div>
   </div>
@@ -719,7 +684,7 @@
         <div class="logo-mark">A</div>
         <div>
           <div class="logo-text-main">Aurelian Systems</div>
-          <div class="logo-text-sub">WhatsApp sales assistant</div>
+          <div class="logo-text-sub">AI messaging & sales assistant</div>
         </div>
       </div>
       <nav>
@@ -739,13 +704,20 @@
         <div>
           <div class="eyebrow">AI for modern service businesses</div>
           <h1>
-            Turn your WhatsApp into a <span class="accent">sales assistant</span>.
+            Turn your inbox into a <span class="accent">sales assistant</span>.
           </h1>
           <p class="hero-sub">
-            Aurelian Systems replies in seconds, qualifies leads and moves them to a booking —
-            without another person glued to the phone.
+            Aurelian Systems replies in seconds across WhatsApp, Instagram and Facebook,
+            qualifies leads and moves them to booking — without another person glued to the phone.
           </p>
-          <div class="hero-cta-row">
+
+          <div class="channels" aria-label="Supported channels">
+            <div class="channel-pill">WhatsApp</div>
+            <div class="channel-pill">Instagram</div>
+            <div class="channel-pill">Facebook</div>
+          </div>
+
+          <div class="hero-cta-row" style="margin-top:14px;">
             <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
               Book a discovery call
             </button>
@@ -753,17 +725,16 @@
               View pricing
             </button>
           </div>
+
           <div class="hero-note">
             Start with a 5-day pilot. No long contracts.
           </div>
+
           <div class="hero-metrics">
-            <div class="metric-pill">
-              <strong>5–10 sec</strong> reply time
-            </div>
-            <div class="metric-pill">
-              <strong>+20–35%</strong> more bookings*
-            </div>
+            <div class="metric-pill"><strong>5–10 sec</strong> reply time</div>
+            <div class="metric-pill"><strong>+20–35%</strong> more bookings*</div>
           </div>
+
           <div class="hero-trust">
             Trusted by modern service brands
           </div>
@@ -778,18 +749,18 @@
                   Hi, do you have availability for hair treatment this week?
                 </div>
                 <div class="chat-bubble ai">
-                  Hi 👋 Yes, we do. Are you looking for keratin, botox, or colour treatment?
+                  Hi 👋 Yes. What service are you looking for (keratin, botox, colour)?
                 </div>
                 <div class="chat-bubble client">
-                  Keratin, preferably evenings.
+                  Keratin, evenings.
                 </div>
                 <div class="chat-bubble ai">
-                  Perfect. I can offer Wed or Thu at 18:00. Which one works better for you?
+                  Perfect. I can offer Wed or Thu at 18:00. Which one works better?
                 </div>
               </div>
               <div class="chat-foot">
                 <span>AI assistant · 24/7</span>
-                <span>WhatsApp native</span>
+                <span>Multi-channel</span>
               </div>
               <div class="hero-visual-footnote">
                 <span class="hero-visual-dot"></span>
@@ -806,27 +777,27 @@
           <div class="label">Product</div>
           <h2 class="section-title">What Aurelian Systems does.</h2>
           <p class="section-sub">
-            A focused AI agent that lives inside your WhatsApp Business and behaves
-            like a well-trained sales teammate.
+            A focused AI agent that handles inbound chats across WhatsApp, Instagram and Facebook —
+            and turns them into real bookings.
           </p>
 
           <div class="features-row">
             <div class="feature-card">
               <div class="feature-title">Replies instantly</div>
               <div class="feature-text">
-                Answers new leads in seconds with clear, human messages — day and night.
+                Answers new leads in seconds across your channels — 24/7.
               </div>
             </div>
             <div class="feature-card">
-              <div class="feature-title">Asks the right questions</div>
+              <div class="feature-title">Qualifies leads</div>
               <div class="feature-text">
-                Qualifies people with 2–3 simple questions instead of sending long menus.
+                Asks 2–3 key questions, filters time-wasters, and keeps the conversation moving.
               </div>
             </div>
             <div class="feature-card">
-              <div class="feature-title">Guides to booking</div>
+              <div class="feature-title">Books & follows up</div>
               <div class="feature-text">
-                Suggests times, confirms details and follows up when someone disappears.
+                Suggests times, confirms details, and follows up when someone goes quiet.
               </div>
             </div>
           </div>
@@ -840,41 +811,36 @@
           <h2 class="section-title">One product. Three simple plans.</h2>
           <p class="section-sub">
             Monthly subscription. Cancel anytime after the pilot.
+            Includes WhatsApp + Instagram + Facebook messaging workflows.
           </p>
 
           <div class="pricing-row">
             <div class="pricing-card">
               <div class="pricing-name">Starter</div>
-              <div class="pricing-price">
-                $299 <span>/ month</span>
-              </div>
-              <div class="pricing-desc">For testing AI on one WhatsApp channel.</div>
+              <div class="pricing-price">$299 <span>/ month</span></div>
+              <div class="pricing-desc">For testing AI on one brand inbox.</div>
               <ul class="pricing-list">
                 <li>Up to ~300 conversations / month</li>
                 <li>Single language</li>
-                <li>Basic FAQ & booking flow</li>
+                <li>Basic qualification & booking</li>
               </ul>
             </div>
 
             <div class="pricing-card highlight">
               <div class="pricing-name">Growth</div>
-              <div class="pricing-price">
-                $499 <span>/ month</span>
-              </div>
-              <div class="pricing-desc">For teams that live in WhatsApp daily.</div>
+              <div class="pricing-price">$499 <span>/ month</span></div>
+              <div class="pricing-desc">For teams that live in DMs daily.</div>
               <ul class="pricing-list">
                 <li>Up to ~1,000 conversations / month</li>
-                <li>Advanced qualification & follow-up</li>
+                <li>Advanced follow-up logic</li>
                 <li>Multi-step booking journeys</li>
               </ul>
             </div>
 
             <div class="pricing-card">
               <div class="pricing-name">Scale</div>
-              <div class="pricing-price">
-                $799 <span>/ month</span>
-              </div>
-              <div class="pricing-desc">For brands with multiple locations.</div>
+              <div class="pricing-price">$799 <span>/ month</span></div>
+              <div class="pricing-desc">For brands with higher volume.</div>
               <ul class="pricing-list">
                 <li>2,500+ conversations / month</li>
                 <li>Custom flows & light integrations</li>
@@ -890,19 +856,28 @@
         <div class="section-inner">
           <div class="label">FAQ</div>
           <h2 class="section-title">Questions you might have.</h2>
-          <p class="section-sub">
-            A few quick answers before we talk.
-          </p>
+          <p class="section-sub">A few quick answers before we talk.</p>
 
           <div class="faq-items">
+            <div class="faq-item">
+              <div class="faq-question">
+                <div class="faq-question-text">Does this work on WhatsApp, Instagram and Facebook?</div>
+                <div class="faq-icon">+</div>
+              </div>
+              <div class="faq-answer">
+                Yes — we build messaging flows for all three channels. The assistant keeps a consistent tone
+                and can route conversations to the right outcome (booking, info, follow-up).
+              </div>
+            </div>
+
             <div class="faq-item">
               <div class="faq-question">
                 <div class="faq-question-text">Is this just a simple chatbot?</div>
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                Aurelian Systems uses modern language models trained on your services and tone,
-                so it understands context and writes natural replies — not just fixed buttons.
+                It’s a trained assistant with your services, rules and tone. It can handle context,
+                ask key questions and guide users to booking — not just push button menus.
               </div>
             </div>
 
@@ -912,30 +887,17 @@
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                Yes. Your team can jump into any conversation at any time. Think of Aurelian Systems
-                as a first-line assistant that handles the routine and keeps things moving.
+                Yes. Your team can jump into any conversation at any time. We design it with a clear handoff.
               </div>
             </div>
 
             <div class="faq-item">
               <div class="faq-question">
-                <div class="faq-question-text">How long does setup usually take?</div>
+                <div class="faq-question-text">Can we cancel if it doesn’t work?</div>
                 <div class="faq-icon">+</div>
               </div>
               <div class="faq-answer">
-                For a typical service business, we can go from zero to a live 5-day pilot
-                in about a week, depending on how fast we get your pricing and example chats.
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <div class="faq-question">
-                <div class="faq-question-text">Can we cancel if it doesn’t work for us?</div>
-                <div class="faq-icon">+</div>
-              </div>
-              <div class="faq-answer">
-                Yes. We start with a 5-day pilot. If Aurelian Systems isn’t a fit,
-                you simply don’t continue — no long-term lock-in.
+                Yes. We start with a 5-day pilot. If it isn’t a fit, you simply don’t continue.
               </div>
             </div>
           </div>
@@ -946,10 +908,10 @@
       <section id="contact">
         <div class="section-inner">
           <div class="label">Book a call</div>
-          <h2 class="section-title">Tell us about your business.</h2>
+          <h2 class="section-title">Tell us about your inbox.</h2>
           <p class="section-sub">
             Leave your details and we’ll schedule a short call to walk through a demo
-            and see if Aurelian Systems fits you.
+            and outline a simple 5-day pilot.
           </p>
 
           <div class="contact-grid">
@@ -975,16 +937,29 @@
                   <input type="email" id="email" name="email" required placeholder="you@company.com" />
                 </div>
                 <div>
-                  <label for="whatsapp">WhatsApp</label>
-                  <input type="tel" id="whatsapp" name="whatsapp" placeholder="+1 555 123 4567" />
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" />
                 </div>
+
                 <div class="form-full">
-                  <label for="message">What do you use WhatsApp for today?</label>
+                  <label for="channels">Which channels do you want to automate?</label>
+                  <input
+                    type="text"
+                    id="channels"
+                    name="channels"
+                    placeholder="WhatsApp, Instagram, Facebook (or all)"
+                  />
+                </div>
+
+                <div class="form-full">
+                  <label for="message">What do you sell and how do you book clients today?</label>
                   <textarea id="message" name="message" placeholder="Short description is enough."></textarea>
                 </div>
+
                 <div class="form-full">
                   <button type="submit" class="btn btn-primary">Request a call</button>
                 </div>
+
                 <div class="form-full form-footnote">
                   We’ll only use your details to contact you about Aurelian Systems.
                 </div>
@@ -992,13 +967,11 @@
             </div>
 
             <div class="contact-text">
-              <div>
-                We typically respond within one business day.
-              </div>
+              <div>We typically respond within one business day.</div>
               <div>
                 On the call, we’ll:<br/>
-                – look at your current WhatsApp flow<br/>
-                – show how the assistant would handle it<br/>
+                – review your WhatsApp/IG/FB message flow<br/>
+                – show a demo of the assistant<br/>
                 – outline a simple 5-day pilot on real traffic
               </div>
             </div>
@@ -1009,31 +982,25 @@
 
     <footer>
       <div>© <span id="year"></span> Aurelian Systems.</div>
-      <div>Built for teams that sell through WhatsApp.</div>
+      <div>AI assistant for WhatsApp, Instagram & Facebook.</div>
     </footer>
   </div>
 
   <script>
-    // год в футере
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // FAQ аккордеон
     document.querySelectorAll('.faq-item').forEach(item => {
-      const question = item.querySelector('.faq-question');
-      question.addEventListener('click', () => {
-        item.classList.toggle('open');
-      });
+      const q = item.querySelector('.faq-question');
+      q.addEventListener('click', () => item.classList.toggle('open'));
     });
 
-    // Анимация 3D-логотипа при скролле (чуть увеличивается и опускается)
     const bgCircle = document.querySelector('.bg-logo-circle');
     window.addEventListener('scroll', () => {
       const maxScroll = 600;
       const s = Math.min(window.scrollY / maxScroll, 1);
-      const scale = 1 + s * 0.22;        // до ~1.22
-      const translateY = -20 + s * 25;   // с -20px до +5px
-      bgCircle.style.transform =
-        `translate3d(0, ${translateY}px, 0) scale(${scale})`;
+      const scale = 1 + s * 0.22;
+      const translateY = -20 + s * 25;
+      bgCircle.style.transform = `translate3d(0, ${translateY}px, 0) scale(${scale})`;
     });
   </script>
 </body>
